@@ -1,0 +1,1703 @@
+[
+    {
+        "id": "0e7bf3a02f0be5b7",
+        "type": "tab",
+        "label": "DT_of_HP_Test_Bench_Hot_Water_Circuit",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1d6cf4fb64c8f0c7",
+        "type": "comment",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "PID Corrector",
+        "info": "",
+        "x": 70,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "0980f946a207270a",
+        "type": "comment",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Dashboard Output from PID",
+        "info": "",
+        "x": 1080,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e5d460a33f6298a1",
+        "type": "dt-relation",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "used_to_control",
+        "direction": "-->",
+        "x": 1060,
+        "y": 260,
+        "wires": [
+            [
+                "1cd1a0a151d8ec55"
+            ]
+        ]
+    },
+    {
+        "id": "9b3fb7a8ceef7742",
+        "type": "dt-graph",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "DT_HP_testBench",
+        "projectName": "project1",
+        "projectId": "uuid1",
+        "version": "1.0.0+1",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "9c395bd343168340"
+            ]
+        ]
+    },
+    {
+        "id": "b6190e53df894ae9",
+        "type": "dt-relation",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Send_hot_water_to",
+        "direction": "-->",
+        "x": 1050,
+        "y": 580,
+        "wires": [
+            [
+                "1cd1a0a151d8ec55"
+            ]
+        ]
+    },
+    {
+        "id": "1cd1a0a151d8ec55",
+        "type": "dt-asset",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "3_way_vann",
+        "dtType": "Material",
+        "aContext": "",
+        "aId": "39r45jus357yr3he",
+        "x": 1350,
+        "y": 440,
+        "wires": [
+            [
+                "e21db58fc11c22eb",
+                "334a5bb9439fcc8b"
+            ]
+        ]
+    },
+    {
+        "id": "dcf531de822bf733",
+        "type": "dt-asset",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Aerotherme",
+        "dtType": "Material",
+        "aContext": "",
+        "aId": "a2wf64d8h5w5qh52",
+        "x": 1830,
+        "y": 260,
+        "wires": [
+            [
+                "99248d59f084aa69"
+            ]
+        ]
+    },
+    {
+        "id": "e21db58fc11c22eb",
+        "type": "dt-relation",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Feed_Hot_Water_to",
+        "direction": "-->",
+        "x": 1570,
+        "y": 260,
+        "wires": [
+            [
+                "dcf531de822bf733"
+            ]
+        ]
+    },
+    {
+        "id": "334a5bb9439fcc8b",
+        "type": "dt-relation",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "relay_hot_water_to",
+        "direction": "-->",
+        "x": 1570,
+        "y": 440,
+        "wires": [
+            [
+                "03eec3473c0cc43e"
+            ]
+        ]
+    },
+    {
+        "id": "03eec3473c0cc43e",
+        "type": "dt-asset",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Heat_Exchanger",
+        "dtType": "Material",
+        "aContext": "",
+        "aId": "4d34gh7ie4gkz599",
+        "x": 2290,
+        "y": 440,
+        "wires": [
+            [
+                "775fa4acced04fa2"
+            ]
+        ]
+    },
+    {
+        "id": "c1005425d9d48260",
+        "type": "dt-relation",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "reinject_hot_water_to",
+        "direction": "-->",
+        "x": 2200,
+        "y": 300,
+        "wires": [
+            [
+                "03eec3473c0cc43e"
+            ]
+        ]
+    },
+    {
+        "id": "08f8eccf0ad8d492",
+        "type": "dt-asset",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Heat Pump",
+        "dtType": "Material",
+        "aContext": "",
+        "aId": "24e4t4m58yv8w5pv",
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "d72675810488b935"
+            ]
+        ]
+    },
+    {
+        "id": "a0fd7531bdbeeaa8",
+        "type": "dt-asset",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Hot Water Tank",
+        "dtType": "Material",
+        "aContext": "",
+        "aId": "8k2653am9hak5tz7",
+        "x": 2920,
+        "y": 800,
+        "wires": [
+            [
+                "ccc25b34a7432749"
+            ]
+        ]
+    },
+    {
+        "id": "59f552f179861ee8",
+        "type": "dt-relation",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Store_Hot_Water_to",
+        "direction": "-->",
+        "x": 2810,
+        "y": 540,
+        "wires": [
+            [
+                "b3b79d965e7bf506"
+            ]
+        ]
+    },
+    {
+        "id": "ccc25b34a7432749",
+        "type": "dt-relation",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "ReinjectHotWater_to",
+        "direction": "<--",
+        "x": 1590,
+        "y": 920,
+        "wires": [
+            [
+                "9fe8727ba9929dc2"
+            ]
+        ]
+    },
+    {
+        "id": "39bbe57df44ca7b7",
+        "type": "ui-gauge",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Temp In chaud HP",
+        "group": "a25d42467177cc20",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Hot Water Incoming to HP",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 690,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "32706817198a684b",
+        "type": "ui-gauge",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Temp Out chaud HP",
+        "group": "a25d42467177cc20",
+        "order": 2,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Hot Water Outcoming from HP",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 640,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "432dcbc6370f6ba0",
+        "type": "ui-gauge",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Temp Out Aerotherme",
+        "group": "a0e215310cdd5675",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Hot Water Coming out Aerotherme",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2100,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c42ec078ead4721b",
+        "type": "ui-gauge",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Temp Out Heat Exchanger",
+        "group": "8ca5738ff35c72b1",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Water Outcoming Heat Exchanger",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2620,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6216c54c9586a7f7",
+        "type": "ui-gauge",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Flowmeter Hot Water",
+        "group": "ee115ad3bbbb60e4",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Flowmeter Hot Water",
+        "units": "L / min",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#99c1f1"
+            },
+            {
+                "from": "25",
+                "color": "#33d17a"
+            },
+            {
+                "from": "50",
+                "color": "#f6d32d"
+            },
+            {
+                "from": "75",
+                "color": "#ff7800"
+            },
+            {
+                "from": "100",
+                "color": "#ed333b"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 3180,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "22314f737dcb03a2",
+        "type": "comment",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "[part 1] Comand Control For Air Heater",
+        "info": "",
+        "x": 2630,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5a5c5966ab2bd20e",
+        "type": "ui-form",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Aerotherme PID Set Point",
+        "group": "7a06389195274203",
+        "label": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Set Point Values (Lower than 35°C)",
+                "key": "set_point_aerotherme",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "set_point_aerotherme": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "resetOnSubmit": true,
+        "topic": "payload",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 2810,
+        "y": 320,
+        "wires": [
+            [
+                "dac5a8426449859f"
+            ]
+        ]
+    },
+    {
+        "id": "dac5a8426449859f",
+        "type": "switch",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "",
+        "property": "payload.set_point_aerotherme",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "35",
+                "vt": "str"
+            },
+            {
+                "t": "gt",
+                "v": "valeur au dessus du seuil accepte",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3040,
+        "y": 320,
+        "wires": [
+            [
+                "d14d52e8cba961a1"
+            ],
+            [
+                "add3a271d1cc610f"
+            ]
+        ]
+    },
+    {
+        "id": "eae13db6c8c74fc0",
+        "type": "ui-chart",
+        "z": "0e7bf3a02f0be5b7",
+        "group": "2bf1924fdb511b62",
+        "name": "Output value of PID",
+        "label": "Output Voltage DC from PID process",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1050,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a4038cebe5070ec",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "get HE",
+        "links": [
+            "7231eefaf588e559"
+        ],
+        "x": 2455,
+        "y": 400,
+        "wires": [
+            [
+                "c42ec078ead4721b"
+            ]
+        ]
+    },
+    {
+        "id": "dd030d0ef99ec9c9",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "get temp aerotherme",
+        "links": [
+            "bd2beccfc2a5f6a6"
+        ],
+        "x": 1945,
+        "y": 120,
+        "wires": [
+            [
+                "432dcbc6370f6ba0"
+            ]
+        ]
+    },
+    {
+        "id": "b3b4f2956a98a071",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "get hot flowrate",
+        "links": [
+            "2e7e4b02c8fd4b11"
+        ],
+        "x": 2955,
+        "y": 600,
+        "wires": [
+            [
+                "6216c54c9586a7f7"
+            ]
+        ]
+    },
+    {
+        "id": "b71aa4eca04a78c5",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "get_hot_temp_in",
+        "links": [
+            "e183bb69acca9d96"
+        ],
+        "x": 545,
+        "y": 900,
+        "wires": [
+            [
+                "39bbe57df44ca7b7"
+            ]
+        ]
+    },
+    {
+        "id": "28be8a9a7a7ea706",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "get_hot_temp_out",
+        "links": [
+            "098057245bed8761"
+        ],
+        "x": 495,
+        "y": 560,
+        "wires": [
+            [
+                "32706817198a684b"
+            ]
+        ]
+    },
+    {
+        "id": "d72675810488b935",
+        "type": "dt-property",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "temp_outcoming_HP",
+        "accessGroup": "",
+        "aContext": "Heat Pump Asset",
+        "aId": "4uv99z294f3qn4qs",
+        "aType": "",
+        "x": 640,
+        "y": 620,
+        "wires": [
+            [
+                "b6190e53df894ae9"
+            ]
+        ]
+    },
+    {
+        "id": "99248d59f084aa69",
+        "type": "dt-property",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Temp_outcoming_Aerotherme",
+        "accessGroup": "",
+        "aContext": "Aerotherme asset",
+        "aId": "66q2zuket8mt2344",
+        "aType": "",
+        "x": 2070,
+        "y": 200,
+        "wires": [
+            [
+                "c1005425d9d48260"
+            ]
+        ]
+    },
+    {
+        "id": "775fa4acced04fa2",
+        "type": "dt-property",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Temp_Outcoming_HE",
+        "accessGroup": "",
+        "aContext": "Heat Exchanger Asset",
+        "aId": "74ra8w33s7n64tfy",
+        "aType": "",
+        "x": 2540,
+        "y": 480,
+        "wires": [
+            [
+                "59f552f179861ee8"
+            ]
+        ]
+    },
+    {
+        "id": "b3b79d965e7bf506",
+        "type": "dt-property",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Hot_Water_Flowrate",
+        "accessGroup": "",
+        "aContext": "Hot Water  Incoming to Tank",
+        "aId": "8piayj23i3jc9884",
+        "aType": "",
+        "x": 3020,
+        "y": 660,
+        "wires": [
+            [
+                "a0fd7531bdbeeaa8"
+            ]
+        ]
+    },
+    {
+        "id": "9fe8727ba9929dc2",
+        "type": "dt-property",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Temp_Incoming_HP",
+        "accessGroup": "",
+        "aContext": "Heat Pump (HP) Asset",
+        "aId": "726yv997q4wtpe2d",
+        "aType": "",
+        "x": 640,
+        "y": 820,
+        "wires": [
+            [
+                "08f8eccf0ad8d492"
+            ]
+        ]
+    },
+    {
+        "id": "7ba620566d9a7b25",
+        "type": "ui-notification",
+        "z": "0e7bf3a02f0be5b7",
+        "ui": "2eba3989bac8e2c1",
+        "position": "bottom center",
+        "colorDefault": false,
+        "color": "#f9f06b",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Twinning State",
+        "x": 1300,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70020429f3894747",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "warning_msg1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Warning : Quadrature Phase Twinning ",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Aerotherme Temperature in DT IS DIFFERENT TO the ICS",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 1080,
+        "wires": [
+            [
+                "7ba620566d9a7b25"
+            ]
+        ]
+    },
+    {
+        "id": "4529cd277715af8a",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "get_acquis_aerotherme_values",
+        "links": [
+            "9c653464a873d9f1"
+        ],
+        "x": 45,
+        "y": 1040,
+        "wires": [
+            [
+                "f2e62ace53c45deb"
+            ]
+        ]
+    },
+    {
+        "id": "41d1f072c91c7fde",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "get_ctrl_aerotherme_values",
+        "links": [
+            "1c080549d24b1d58"
+        ],
+        "x": 45,
+        "y": 1140,
+        "wires": [
+            [
+                "0d239ebfab9853e6"
+            ]
+        ]
+    },
+    {
+        "id": "f2e62ace53c45deb",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "val_aerotherme_aquisition",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "val_aerotherme_aquisition",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 1040,
+        "wires": [
+            [
+                "cfeba50cbe4b67da"
+            ]
+        ]
+    },
+    {
+        "id": "0d239ebfab9853e6",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "val_aerotherme_control",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "val_aerotherme_control",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 1140,
+        "wires": [
+            [
+                "cfeba50cbe4b67da"
+            ]
+        ]
+    },
+    {
+        "id": "cfeba50cbe4b67da",
+        "type": "Comparator",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Comparator",
+        "property": "payload",
+        "math": "===",
+        "topic1": "val_aerotherme_aquisition",
+        "topic2": "val_aerotherme_control",
+        "x": 590,
+        "y": 1080,
+        "wires": [
+            [
+                "ec06fbbc8bb53ff3"
+            ]
+        ]
+    },
+    {
+        "id": "b269fe5a377763b4",
+        "type": "ui-notification",
+        "z": "0e7bf3a02f0be5b7",
+        "ui": "2eba3989bac8e2c1",
+        "position": "top right",
+        "colorDefault": false,
+        "color": "#00bfff",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Confirm ctrl",
+        "x": 4650,
+        "y": 320,
+        "wires": [
+            [
+                "ea4f602cf89917d1"
+            ]
+        ]
+    },
+    {
+        "id": "72bed6719739a189",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "confirm_msg",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Aerotherme Set Point",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "COMMAND SENT TO AEROTHERME",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4470,
+        "y": 320,
+        "wires": [
+            [
+                "b269fe5a377763b4"
+            ]
+        ]
+    },
+    {
+        "id": "ec06fbbc8bb53ff3",
+        "type": "switch",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "predicate1",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 810,
+        "y": 1080,
+        "wires": [
+            [
+                "70020429f3894747"
+            ]
+        ]
+    },
+    {
+        "id": "d19396e99897eded",
+        "type": "OPCUA-IIoT-Write",
+        "z": "0e7bf3a02f0be5b7",
+        "connector": "eee8f9645d03834c",
+        "name": "Write_cmd_ctrl",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 4060,
+        "y": 320,
+        "wires": [
+            [
+                "2c50f809fdf3220e"
+            ]
+        ]
+    },
+    {
+        "id": "5ce4d593bef9e1bb",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "0e7bf3a02f0be5b7",
+        "injectType": "write",
+        "payload": "SetPointInChaud",
+        "payloadType": "flow",
+        "topic": "",
+        "repeat": "1.001",
+        "crontab": "",
+        "once": false,
+        "startDelay": "",
+        "name": "Inject cmd aerotherme",
+        "addressSpaceItems": [
+            {
+                "name": "SetPointInChaud",
+                "nodeId": "ns=2;i=27",
+                "datatypeName": "Float"
+            }
+        ],
+        "x": 3770,
+        "y": 320,
+        "wires": [
+            [
+                "d19396e99897eded"
+            ]
+        ]
+    },
+    {
+        "id": "d14d52e8cba961a1",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Store Input Data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SetPointInChaud",
+                "pt": "flow",
+                "to": "payload.set_point_aerotherme",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3240,
+        "y": 320,
+        "wires": [
+            [
+                "8f950b33340f6a37"
+            ]
+        ]
+    },
+    {
+        "id": "24e12116d4bd227b",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "initialize variable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SetPointInChaud",
+                "pt": "flow",
+                "to": "0.0",
+                "tot": "num",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2560,
+        "y": 320,
+        "wires": [
+            [
+                "5a5c5966ab2bd20e"
+            ]
+        ]
+    },
+    {
+        "id": "80ebfbbe536ba41d",
+        "type": "function",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Value",
+        "func": "var op = msg.payload.Value;\n\nmsg.payload = op;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 240,
+        "wires": [
+            [
+                "495e70130528c3e5"
+            ]
+        ]
+    },
+    {
+        "id": "495e70130528c3e5",
+        "type": "range",
+        "z": "0e7bf3a02f0be5b7",
+        "minin": "0",
+        "maxin": "10",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 800,
+        "y": 240,
+        "wires": [
+            [
+                "eae13db6c8c74fc0",
+                "e5d460a33f6298a1"
+            ]
+        ]
+    },
+    {
+        "id": "1eecdca6b9e85dfb",
+        "type": "ui-notification",
+        "z": "0e7bf3a02f0be5b7",
+        "ui": "2eba3989bac8e2c1",
+        "position": "top right",
+        "colorDefault": false,
+        "color": "#ea5353",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Command out of bounds",
+        "x": 3490,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "add3a271d1cc610f",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "danger_msg",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Danger !",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "CANNOT SEND THIS INPUT VALUE",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3230,
+        "y": 440,
+        "wires": [
+            [
+                "1eecdca6b9e85dfb"
+            ]
+        ]
+    },
+    {
+        "id": "2c50f809fdf3220e",
+        "type": "switch",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "show msg ?",
+        "property": "show_msg",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 4270,
+        "y": 320,
+        "wires": [
+            [
+                "72bed6719739a189"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ed7da115b79532c5",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Initialize Predicate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2570,
+        "y": 260,
+        "wires": [
+            [
+                "8c706538c1fd3051"
+            ]
+        ]
+    },
+    {
+        "id": "8c706538c1fd3051",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Store Local Predicate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2840,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f950b33340f6a37",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "assign Predicate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3450,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2a0195e2249bc72",
+        "type": "comment",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "[part 2] Comand Control For Air Heater",
+        "info": "",
+        "x": 3790,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ea4f602cf89917d1",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Predicate Default Value",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4890,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "324fc5b425d223c6",
+        "type": "link in",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "link in 1",
+        "links": [
+            "f0e6c1226cde0d16"
+        ],
+        "x": 155,
+        "y": 320,
+        "wires": [
+            [
+                "53600142469dc46d"
+            ]
+        ]
+    },
+    {
+        "id": "c66235204a16a8c4",
+        "type": "comment",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Process_value",
+        "info": "",
+        "x": 140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "53600142469dc46d",
+        "type": "easy-pid-controller",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "AEROTHERME PID",
+        "k_p": "1.4",
+        "k_i": "0.175",
+        "k_d": 0,
+        "sensor_type": "0-10V",
+        "dt": "60",
+        "range_min": 0,
+        "range_max": "10",
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "80ebfbbe536ba41d"
+            ]
+        ]
+    },
+    {
+        "id": "83a41d7e1110c958",
+        "type": "change",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "add_topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "auto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "53600142469dc46d"
+            ]
+        ]
+    },
+    {
+        "id": "2f3f8b46ebad6ee4",
+        "type": "inject",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 70,
+        "y": 220,
+        "wires": [
+            [
+                "83a41d7e1110c958"
+            ]
+        ]
+    },
+    {
+        "id": "9c395bd343168340",
+        "type": "debug",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "debug_dt",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "2b7166fafdde257e",
+        "type": "comment",
+        "z": "0e7bf3a02f0be5b7",
+        "name": "Ensure Twining State",
+        "info": "",
+        "x": 220,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "a25d42467177cc20",
+        "type": "ui-group",
+        "name": "Hot Water Circuit on Heat Pump (HP)",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a0e215310cdd5675",
+        "type": "ui-group",
+        "name": "Water Transit on Aerotherme",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "8ca5738ff35c72b1",
+        "type": "ui-group",
+        "name": "Heat Exchanger",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ee115ad3bbbb60e4",
+        "type": "ui-group",
+        "name": "Flowmeter Upstream Water Tank",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7a06389195274203",
+        "type": "ui-group",
+        "name": "Control Aerotherme",
+        "page": "80316a8986ee7cb8",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2bf1924fdb511b62",
+        "type": "ui-group",
+        "name": "PID Output",
+        "page": "80316a8986ee7cb8",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2eba3989bac8e2c1",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true
+    },
+    {
+        "id": "eee8f9645d03834c",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://72.168.36.240:4840/",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "opcua_for_DT",
+        "showErrors": true,
+        "securityPolicy": "Basic256Sha256",
+        "securityMode": "SignAndEncrypt",
+        "individualCerts": true,
+        "publicCertificateFile": "/home/kambana/certificate/digitaltwincert.der",
+        "privateKeyFile": "/home/kambana/certificate/key2.pem",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": 10
+    },
+    {
+        "id": "6c2556a7412477cf",
+        "type": "ui-page",
+        "name": "Heat Pump Test Bench : Hot Water Circuit",
+        "ui": "2eba3989bac8e2c1",
+        "path": "/geohp",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "e8cbc83b09e58158",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "80316a8986ee7cb8",
+        "type": "ui-page",
+        "name": "Command control for PID on Heat Pump Test Bench : Hot Water Circuit",
+        "ui": "2eba3989bac8e2c1",
+        "path": "/cmd",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "default",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "e8cbc83b09e58158",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    }
+]
