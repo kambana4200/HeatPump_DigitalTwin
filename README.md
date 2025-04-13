@@ -1,6 +1,6 @@
- Flow representing the DT of a Heat Pump Test Bench : Verzion 1 on 04 / 2025
+Flow representing the DT of a Heat Pump Test Bench : Verzion 1 on 04 / 2025
 
- Functionalities proposes on HMI :
+Functionalities proposes on HMI :
 
  1) Interactive dashboard of Heat Pump's Sensor and Actuator datas
  2) Sending Command Control to Heat Pump's Air-Heater
