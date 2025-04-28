@@ -11,10 +11,5 @@ Add assets on the semantic Digital Model on this flow Then view all data modific
 
 ### Digital Twins of HeatPump TestBench: Video showing the features offered
 
-
-https://github.com/user-attachments/assets/17e8d2e8-bc82-4914-999f-ba7eba18e571
-
-
-
 ### Using this flow: import the .json file on a Node-RED Platform
 
