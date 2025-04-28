@@ -1,14 +1,14 @@
-##Node-RED Flow representing the DT of a Heat Pump Test Bench : Verzion 1 on 04 / 2025
+### Node-RED Flow representing the DT of a Heat Pump Test Bench : Verzion 1 on 04 / 2025
 
-##Proposed Functionality on HMI :
+## Proposed Functionality on HMI :
 
  1) Interactive dashboard of Heat Pump's Sensor and Actuator datas
  2) Sending Command Control to Heat Pump's Air-Heater
  3) Twin of a PID Corrector
 
-##Simulation Abilities : Add assets on the semantic Digital Model on this flow Then view all data modifications
+## Simulation Abilities : Add assets on the semantic Digital Model on this flow Then view all data modifications
 
-##Digital Twins of HeatPump TestBench: Video showing the features offered
+## Digital Twins of HeatPump TestBench: Video showing the features offered
 
-##Using this flow : import the .json file on a Node-RED Platform
+## Using this flow : import the .json file on a Node-RED Platform
 
