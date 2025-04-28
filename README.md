@@ -6,7 +6,8 @@
  2) Sending Command Control to Heat Pump's Air-Heater
  3) Twin of a PID Corrector
 
-### Simulation Abilities : Add assets on the semantic Digital Model on this flow Then view all data modifications
+### Simulation Abilities : 
+Add assets on the semantic Digital Model on this flow Then view all data modifications
 
 ### Digital Twins of HeatPump TestBench: Video showing the features offered
 
