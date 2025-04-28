@@ -9,7 +9,7 @@
  3) Twin of a PID Corrector
     
 ### Digital Twins of HeatPump TestBench: Video showing the features offered
-https://github.com/user-attachments/assets/4ddcec93-6c11-4a5c-9fc6-c096db6fc1a4
+https://github.com/user-attachments/assets/5a13334d-7fd6-4bc3-b247-20a3fbc5aa8a
 
 ### Communication from and to the DT is encrypted (Privacy Precaution):
 This capture of network traffic to the DT allows to attest the sending of the SSL certificate to the DT with public key exchange
