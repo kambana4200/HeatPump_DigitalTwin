@@ -4,7 +4,7 @@
 
 ### Communication from and to the DT is encrypted (Privacy Precaution):
 This capture of network traffic to the DT allows to attest the sending of the SSL certificate to the DT with public key exchange
-
+![Preuve_privacy_OPCUA_Protocol](https://github.com/user-attachments/assets/46677a42-1de0-4de5-88fa-77e326c771ee)
 ### Proposed Functionality on Human Machine Interface:
 
  1) Interactive dashboard of Heat Pump's Sensor and Actuator datas
