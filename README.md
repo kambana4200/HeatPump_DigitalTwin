@@ -13,8 +13,7 @@ https://github.com/user-attachments/assets/5a13334d-7fd6-4bc3-b247-20a3fbc5aa8a
 
 ### Communication from and to the DT is encrypted (Privacy Precaution):
 This capture of network traffic to the DT allows to attest the sending of the SSL certificate to the DT with public key exchange
-![Preuve_privacy_OPCUA_Protocol](https://github.com/user-attachments/assets/5b9c5343-b19e-43fd-ac80-b447ed3d29aa)
-
+![privacy_proof](https://github.com/user-attachments/assets/14caffa1-c243-4778-bbb2-be407848ef9f)
 
 ### Simulation Abilities: 
 Add assets on the semantic Digital Model on this flow Then view all data modifications
