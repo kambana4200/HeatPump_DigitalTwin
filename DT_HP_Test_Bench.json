@@ -1,231 +1,252 @@
 [
     {
-        "id": "0e7bf3a02f0be5b7",
+        "id": "b4ac2e01b5986285",
         "type": "tab",
-        "label": "DT_of_HP_Test_Bench_Hot_Water_Circuit",
+        "label": "HP Test Bench Digital Twins",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "1d6cf4fb64c8f0c7",
+        "id": "b7a0feac79e7f0b6",
+        "type": "group",
+        "z": "b4ac2e01b5986285",
+        "style": {
+            "stroke": "#b2b3bd",
+            "stroke-opacity": "1",
+            "fill": "#f2f3fb",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#32333b"
+        },
+        "nodes": [
+            "865f64a00c0a6785"
+        ],
+        "x": 1834,
+        "y": 1179,
+        "w": 312,
+        "h": 82
+    },
+    {
+        "id": "7583e792b2a464e6",
         "type": "comment",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "PID Corrector",
+        "z": "b4ac2e01b5986285",
+        "name": "Asservissement PID",
         "info": "",
-        "x": 70,
+        "x": 110,
         "y": 140,
         "wires": []
     },
     {
-        "id": "0980f946a207270a",
+        "id": "4705bc307a221cfe",
         "type": "comment",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Dashboard Output from PID",
         "info": "",
-        "x": 1080,
-        "y": 140,
+        "x": 1120,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "e5d460a33f6298a1",
+        "id": "0961103bc02f651e",
         "type": "dt-relation",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "used_to_control",
         "direction": "-->",
-        "x": 1060,
-        "y": 260,
+        "x": 1160,
+        "y": 280,
         "wires": [
             [
-                "1cd1a0a151d8ec55"
+                "dc2e08d30a621dae"
             ]
         ]
     },
     {
-        "id": "9b3fb7a8ceef7742",
+        "id": "cd62da93be0042cd",
         "type": "dt-graph",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "DT_HP_testBench",
+        "z": "b4ac2e01b5986285",
+        "name": "",
         "projectName": "project1",
         "projectId": "uuid1",
         "version": "1.0.0+1",
-        "x": 110,
+        "x": 80,
         "y": 40,
         "wires": [
             [
-                "9c395bd343168340"
+                "c66af8a8144b9467"
             ]
         ]
     },
     {
-        "id": "b6190e53df894ae9",
+        "id": "710b3122befd09ad",
         "type": "dt-relation",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Send_hot_water_to",
         "direction": "-->",
         "x": 1050,
         "y": 580,
         "wires": [
             [
-                "1cd1a0a151d8ec55"
+                "dc2e08d30a621dae"
             ]
         ]
     },
     {
-        "id": "1cd1a0a151d8ec55",
+        "id": "dc2e08d30a621dae",
         "type": "dt-asset",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "3_way_vann",
         "dtType": "Material",
         "aContext": "",
-        "aId": "39r45jus357yr3he",
+        "aId": "",
         "x": 1350,
         "y": 440,
         "wires": [
             [
-                "e21db58fc11c22eb",
-                "334a5bb9439fcc8b"
+                "417372d4ce9dfe94",
+                "10a014f0c2ae80eb"
             ]
         ]
     },
     {
-        "id": "dcf531de822bf733",
+        "id": "33676b9fdb5bb072",
         "type": "dt-asset",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Aerotherme",
         "dtType": "Material",
         "aContext": "",
-        "aId": "a2wf64d8h5w5qh52",
+        "aId": "",
         "x": 1830,
         "y": 260,
         "wires": [
             [
-                "99248d59f084aa69"
+                "72470fad3692deb9"
             ]
         ]
     },
     {
-        "id": "e21db58fc11c22eb",
+        "id": "417372d4ce9dfe94",
         "type": "dt-relation",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Feed_Hot_Water_to",
         "direction": "-->",
         "x": 1570,
         "y": 260,
         "wires": [
             [
-                "dcf531de822bf733"
+                "33676b9fdb5bb072"
             ]
         ]
     },
     {
-        "id": "334a5bb9439fcc8b",
+        "id": "10a014f0c2ae80eb",
         "type": "dt-relation",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "relay_hot_water_to",
         "direction": "-->",
         "x": 1570,
         "y": 440,
         "wires": [
             [
-                "03eec3473c0cc43e"
+                "33b727d38ce749c4"
             ]
         ]
     },
     {
-        "id": "03eec3473c0cc43e",
+        "id": "33b727d38ce749c4",
         "type": "dt-asset",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Heat_Exchanger",
         "dtType": "Material",
         "aContext": "",
-        "aId": "4d34gh7ie4gkz599",
+        "aId": "",
         "x": 2290,
         "y": 440,
         "wires": [
             [
-                "775fa4acced04fa2"
+                "f1fdddc3df156136"
             ]
         ]
     },
     {
-        "id": "c1005425d9d48260",
+        "id": "993635d3e5799c9b",
         "type": "dt-relation",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "reinject_hot_water_to",
         "direction": "-->",
         "x": 2200,
         "y": 300,
         "wires": [
             [
-                "03eec3473c0cc43e"
+                "33b727d38ce749c4"
             ]
         ]
     },
     {
-        "id": "08f8eccf0ad8d492",
+        "id": "fd5c04bc96e4f5f7",
         "type": "dt-asset",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Heat Pump",
         "dtType": "Material",
         "aContext": "",
-        "aId": "24e4t4m58yv8w5pv",
+        "aId": "",
         "x": 410,
         "y": 680,
         "wires": [
             [
-                "d72675810488b935"
+                "45a15a876aea94fd"
             ]
         ]
     },
     {
-        "id": "a0fd7531bdbeeaa8",
+        "id": "4080ece3f4244669",
         "type": "dt-asset",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Hot Water Tank",
         "dtType": "Material",
         "aContext": "",
-        "aId": "8k2653am9hak5tz7",
+        "aId": "",
         "x": 2920,
         "y": 800,
         "wires": [
             [
-                "ccc25b34a7432749"
+                "58dd40e53e0cee2c"
             ]
         ]
     },
     {
-        "id": "59f552f179861ee8",
+        "id": "833a36fcab3b6dff",
         "type": "dt-relation",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Store_Hot_Water_to",
         "direction": "-->",
         "x": 2810,
         "y": 540,
         "wires": [
             [
-                "b3b79d965e7bf506"
+                "5c952d8e4f0b7ae8"
             ]
         ]
     },
     {
-        "id": "ccc25b34a7432749",
+        "id": "58dd40e53e0cee2c",
         "type": "dt-relation",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "ReinjectHotWater_to",
         "direction": "<--",
         "x": 1590,
         "y": 920,
         "wires": [
             [
-                "9fe8727ba9929dc2"
+                "9acd512d1f9ea617"
             ]
         ]
     },
     {
-        "id": "39bbe57df44ca7b7",
+        "id": "726a9fd1b03dd201",
         "type": "ui-gauge",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Temp In chaud HP",
         "group": "a25d42467177cc20",
         "order": 1,
@@ -265,9 +286,9 @@
         "wires": []
     },
     {
-        "id": "32706817198a684b",
+        "id": "5cfe19817c323ff0",
         "type": "ui-gauge",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Temp Out chaud HP",
         "group": "a25d42467177cc20",
         "order": 2,
@@ -307,9 +328,9 @@
         "wires": []
     },
     {
-        "id": "432dcbc6370f6ba0",
+        "id": "b0a5959f0fd02dda",
         "type": "ui-gauge",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Temp Out Aerotherme",
         "group": "a0e215310cdd5675",
         "order": 1,
@@ -349,9 +370,9 @@
         "wires": []
     },
     {
-        "id": "c42ec078ead4721b",
+        "id": "8ffebf4520ebc478",
         "type": "ui-gauge",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Temp Out Heat Exchanger",
         "group": "8ca5738ff35c72b1",
         "order": 1,
@@ -391,9 +412,9 @@
         "wires": []
     },
     {
-        "id": "6216c54c9586a7f7",
+        "id": "3aec24ada2c83a4e",
         "type": "ui-gauge",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Flowmeter Hot Water",
         "group": "ee115ad3bbbb60e4",
         "order": 1,
@@ -441,19 +462,19 @@
         "wires": []
     },
     {
-        "id": "22314f737dcb03a2",
+        "id": "f33f49bb25e90786",
         "type": "comment",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "[part 1] Comand Control For Air Heater",
+        "z": "b4ac2e01b5986285",
+        "name": "[part 1] Commande de controle pour le chaud setpoint ",
         "info": "",
-        "x": 2630,
+        "x": 2680,
         "y": 200,
         "wires": []
     },
     {
-        "id": "5a5c5966ab2bd20e",
+        "id": "2d664f2d28698e4f",
         "type": "ui-form",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Aerotherme PID Set Point",
         "group": "7a06389195274203",
         "label": "",
@@ -486,14 +507,14 @@
         "y": 320,
         "wires": [
             [
-                "dac5a8426449859f"
+                "7f1df44451e1c52b"
             ]
         ]
     },
     {
-        "id": "dac5a8426449859f",
+        "id": "7f1df44451e1c52b",
         "type": "switch",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "",
         "property": "payload.set_point_aerotherme",
         "propertyType": "msg",
@@ -516,25 +537,25 @@
         "y": 320,
         "wires": [
             [
-                "d14d52e8cba961a1"
+                "d2448502495726a0"
             ],
             [
-                "add3a271d1cc610f"
+                "affc91e93bac00f2"
             ]
         ]
     },
     {
-        "id": "eae13db6c8c74fc0",
+        "id": "8e162e5ae2fd2d98",
         "type": "ui-chart",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "group": "2bf1924fdb511b62",
         "name": "Output value of PID",
-        "label": "Output Voltage DC from PID process",
+        "label": "Line Chart of the DC voltage produced by the the PID controller's Digital Twin",
         "order": 1,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
-        "xAxisLabel": "",
+        "xAxisLabel": "Time",
         "xAxisProperty": "",
         "xAxisPropertyType": "timestamp",
         "xAxisType": "time",
@@ -542,7 +563,7 @@
         "xAxisFormatType": "auto",
         "xmin": "",
         "xmax": "",
-        "yAxisLabel": "",
+        "yAxisLabel": "Voltage for Propotional Actuator (in V)",
         "yAxisProperty": "payload",
         "yAxisPropertyType": "msg",
         "ymin": "",
@@ -552,7 +573,7 @@
         "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
+        "showLegend": false,
         "removeOlder": 1,
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
@@ -579,16 +600,16 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 1050,
+        "x": 1190,
         "y": 200,
         "wires": [
             []
         ]
     },
     {
-        "id": "7a4038cebe5070ec",
+        "id": "407e81d816c7e64d",
         "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "get HE",
         "links": [
             "7231eefaf588e559"
@@ -597,14 +618,14 @@
         "y": 400,
         "wires": [
             [
-                "c42ec078ead4721b"
+                "8ffebf4520ebc478"
             ]
         ]
     },
     {
-        "id": "dd030d0ef99ec9c9",
+        "id": "155199b3cad2553b",
         "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "get temp aerotherme",
         "links": [
             "bd2beccfc2a5f6a6"
@@ -613,14 +634,14 @@
         "y": 120,
         "wires": [
             [
-                "432dcbc6370f6ba0"
+                "b0a5959f0fd02dda"
             ]
         ]
     },
     {
-        "id": "b3b4f2956a98a071",
+        "id": "eb125923b23b0a49",
         "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "get hot flowrate",
         "links": [
             "2e7e4b02c8fd4b11"
@@ -629,14 +650,14 @@
         "y": 600,
         "wires": [
             [
-                "6216c54c9586a7f7"
+                "3aec24ada2c83a4e"
             ]
         ]
     },
     {
-        "id": "b71aa4eca04a78c5",
+        "id": "4c87f016d9064a01",
         "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "get_hot_temp_in",
         "links": [
             "e183bb69acca9d96"
@@ -645,14 +666,14 @@
         "y": 900,
         "wires": [
             [
-                "39bbe57df44ca7b7"
+                "726a9fd1b03dd201"
             ]
         ]
     },
     {
-        "id": "28be8a9a7a7ea706",
+        "id": "268b7a01dde51607",
         "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "get_hot_temp_out",
         "links": [
             "098057245bed8761"
@@ -661,99 +682,116 @@
         "y": 560,
         "wires": [
             [
-                "32706817198a684b"
+                "5cfe19817c323ff0"
             ]
         ]
     },
     {
-        "id": "d72675810488b935",
+        "id": "45a15a876aea94fd",
         "type": "dt-property",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "temp_outcoming_HP",
         "accessGroup": "",
         "aContext": "Heat Pump Asset",
-        "aId": "4uv99z294f3qn4qs",
+        "aId": "",
         "aType": "",
         "x": 640,
         "y": 620,
         "wires": [
             [
-                "b6190e53df894ae9"
+                "710b3122befd09ad"
             ]
         ]
     },
     {
-        "id": "99248d59f084aa69",
+        "id": "72470fad3692deb9",
         "type": "dt-property",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Temp_outcoming_Aerotherme",
         "accessGroup": "",
         "aContext": "Aerotherme asset",
-        "aId": "66q2zuket8mt2344",
+        "aId": "",
         "aType": "",
         "x": 2070,
         "y": 200,
         "wires": [
             [
-                "c1005425d9d48260"
+                "993635d3e5799c9b"
             ]
         ]
     },
     {
-        "id": "775fa4acced04fa2",
+        "id": "f1fdddc3df156136",
         "type": "dt-property",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Temp_Outcoming_HE",
         "accessGroup": "",
         "aContext": "Heat Exchanger Asset",
-        "aId": "74ra8w33s7n64tfy",
+        "aId": "",
         "aType": "",
         "x": 2540,
         "y": 480,
         "wires": [
             [
-                "59f552f179861ee8"
+                "833a36fcab3b6dff"
             ]
         ]
     },
     {
-        "id": "b3b79d965e7bf506",
+        "id": "5c952d8e4f0b7ae8",
         "type": "dt-property",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Hot_Water_Flowrate",
         "accessGroup": "",
         "aContext": "Hot Water  Incoming to Tank",
-        "aId": "8piayj23i3jc9884",
+        "aId": "",
         "aType": "",
         "x": 3020,
         "y": 660,
         "wires": [
             [
-                "a0fd7531bdbeeaa8"
+                "4080ece3f4244669"
             ]
         ]
     },
     {
-        "id": "9fe8727ba9929dc2",
+        "id": "9acd512d1f9ea617",
         "type": "dt-property",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Temp_Incoming_HP",
         "accessGroup": "",
         "aContext": "Heat Pump (HP) Asset",
-        "aId": "726yv997q4wtpe2d",
+        "aId": "",
         "aType": "",
         "x": 640,
         "y": 820,
         "wires": [
             [
-                "08f8eccf0ad8d492"
+                "fd5c04bc96e4f5f7"
             ]
         ]
     },
     {
-        "id": "7ba620566d9a7b25",
+        "id": "c66af8a8144b9467",
+        "type": "debug",
+        "z": "b4ac2e01b5986285",
+        "name": "data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 290,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6f43cc11a727dfbc",
         "type": "ui-notification",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "ui": "2eba3989bac8e2c1",
         "position": "bottom center",
         "colorDefault": false,
@@ -769,15 +807,15 @@
         "className": "",
         "name": "Twinning State",
         "x": 1300,
-        "y": 1080,
+        "y": 1120,
         "wires": [
             []
         ]
     },
     {
-        "id": "70020429f3894747",
+        "id": "f532ddca968b1b03",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "warning_msg1",
         "rules": [
             {
@@ -800,50 +838,50 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1020,
-        "y": 1080,
+        "x": 1080,
+        "y": 1120,
         "wires": [
             [
-                "7ba620566d9a7b25"
+                "6f43cc11a727dfbc"
             ]
         ]
     },
     {
-        "id": "4529cd277715af8a",
+        "id": "5f5817487513224f",
         "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "get_acquis_aerotherme_values",
         "links": [
             "9c653464a873d9f1"
         ],
-        "x": 45,
-        "y": 1040,
+        "x": 65,
+        "y": 1060,
         "wires": [
             [
-                "f2e62ace53c45deb"
+                "a43a3b632f3107a6"
             ]
         ]
     },
     {
-        "id": "41d1f072c91c7fde",
+        "id": "27a5f5b3f1899402",
         "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "get_ctrl_aerotherme_values",
         "links": [
             "1c080549d24b1d58"
         ],
-        "x": 45,
-        "y": 1140,
+        "x": 65,
+        "y": 1180,
         "wires": [
             [
-                "0d239ebfab9853e6"
+                "060e637795f78154"
             ]
         ]
     },
     {
-        "id": "f2e62ace53c45deb",
+        "id": "a43a3b632f3107a6",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "val_aerotherme_aquisition",
         "rules": [
             {
@@ -867,18 +905,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 240,
-        "y": 1040,
+        "x": 260,
+        "y": 1060,
         "wires": [
             [
-                "cfeba50cbe4b67da"
+                "670973ba86207613"
             ]
         ]
     },
     {
-        "id": "0d239ebfab9853e6",
+        "id": "060e637795f78154",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "val_aerotherme_control",
         "rules": [
             {
@@ -902,35 +940,35 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 230,
-        "y": 1140,
+        "x": 250,
+        "y": 1180,
         "wires": [
             [
-                "cfeba50cbe4b67da"
+                "670973ba86207613"
             ]
         ]
     },
     {
-        "id": "cfeba50cbe4b67da",
+        "id": "670973ba86207613",
         "type": "Comparator",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Comparator",
         "property": "payload",
         "math": "===",
         "topic1": "val_aerotherme_aquisition",
         "topic2": "val_aerotherme_control",
-        "x": 590,
-        "y": 1080,
+        "x": 570,
+        "y": 1120,
         "wires": [
             [
-                "ec06fbbc8bb53ff3"
+                "32b0891689742779"
             ]
         ]
     },
     {
-        "id": "b269fe5a377763b4",
+        "id": "3f08b9993a095d80",
         "type": "ui-notification",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "ui": "2eba3989bac8e2c1",
         "position": "top right",
         "colorDefault": false,
@@ -949,14 +987,14 @@
         "y": 320,
         "wires": [
             [
-                "ea4f602cf89917d1"
+                "a6b26e00cb4407a3"
             ]
         ]
     },
     {
-        "id": "72bed6719739a189",
+        "id": "f071993300845c12",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "confirm_msg",
         "rules": [
             {
@@ -983,15 +1021,15 @@
         "y": 320,
         "wires": [
             [
-                "b269fe5a377763b4"
+                "3f08b9993a095d80"
             ]
         ]
     },
     {
-        "id": "ec06fbbc8bb53ff3",
+        "id": "32b0891689742779",
         "type": "switch",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "predicate1",
+        "z": "b4ac2e01b5986285",
+        "name": "predicate",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -1002,18 +1040,18 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 810,
-        "y": 1080,
+        "x": 840,
+        "y": 1120,
         "wires": [
             [
-                "70020429f3894747"
+                "f532ddca968b1b03"
             ]
         ]
     },
     {
-        "id": "d19396e99897eded",
+        "id": "9e416d5219914c27",
         "type": "OPCUA-IIoT-Write",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "connector": "eee8f9645d03834c",
         "name": "Write_cmd_ctrl",
         "justValue": true,
@@ -1023,14 +1061,14 @@
         "y": 320,
         "wires": [
             [
-                "2c50f809fdf3220e"
+                "53da4e9fe68678d9"
             ]
         ]
     },
     {
-        "id": "5ce4d593bef9e1bb",
+        "id": "93c4c7a9c9c1d467",
         "type": "OPCUA-IIoT-Inject",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "injectType": "write",
         "payload": "SetPointInChaud",
         "payloadType": "flow",
@@ -1051,14 +1089,14 @@
         "y": 320,
         "wires": [
             [
-                "d19396e99897eded"
+                "9e416d5219914c27"
             ]
         ]
     },
     {
-        "id": "d14d52e8cba961a1",
+        "id": "d2448502495726a0",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Store Input Data",
         "rules": [
             {
@@ -1079,14 +1117,14 @@
         "y": 320,
         "wires": [
             [
-                "8f950b33340f6a37"
+                "5bd223cdcb5c93b8"
             ]
         ]
     },
     {
-        "id": "24e12116d4bd227b",
+        "id": "0083e4610b48dcd0",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "initialize variable",
         "rules": [
             {
@@ -1107,55 +1145,72 @@
         "y": 320,
         "wires": [
             [
-                "5a5c5966ab2bd20e"
+                "2d664f2d28698e4f"
             ]
         ]
     },
     {
-        "id": "80ebfbbe536ba41d",
+        "id": "1a4b6f0aabc9ce9f",
         "type": "function",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Value",
-        "func": "var op = msg.payload.Value;\n\nmsg.payload = op;\n\nreturn msg;",
+        "func": "var op = msg.payload.Value;\n\nmsg.payload = op; \n\nreturn msg;",
         "outputs": 1,
-        "timeout": "",
+        "timeout": "0",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 650,
         "y": 240,
         "wires": [
             [
-                "495e70130528c3e5"
+                "f63a6f98bffe92b6"
             ]
         ]
     },
     {
-        "id": "495e70130528c3e5",
+        "id": "f63a6f98bffe92b6",
         "type": "range",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "minin": "0",
-        "maxin": "10",
+        "maxin": "100",
         "minout": "0",
-        "maxout": "100",
+        "maxout": "10",
         "action": "scale",
         "round": false,
         "property": "payload",
-        "name": "",
-        "x": 800,
+        "name": "mapping PID entry values ",
+        "x": 890,
         "y": 240,
         "wires": [
             [
-                "eae13db6c8c74fc0",
-                "e5d460a33f6298a1"
+                "8e162e5ae2fd2d98",
+                "0961103bc02f651e"
             ]
         ]
     },
     {
-        "id": "1eecdca6b9e85dfb",
+        "id": "97feed95cd322280",
+        "type": "debug",
+        "z": "b4ac2e01b5986285",
+        "name": "debug_output_PID",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6adb305c737ca1ac",
         "type": "ui-notification",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "ui": "2eba3989bac8e2c1",
         "position": "top right",
         "colorDefault": false,
@@ -1177,9 +1232,9 @@
         ]
     },
     {
-        "id": "add3a271d1cc610f",
+        "id": "affc91e93bac00f2",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "danger_msg",
         "rules": [
             {
@@ -1206,14 +1261,14 @@
         "y": 440,
         "wires": [
             [
-                "1eecdca6b9e85dfb"
+                "6adb305c737ca1ac"
             ]
         ]
     },
     {
-        "id": "2c50f809fdf3220e",
+        "id": "53da4e9fe68678d9",
         "type": "switch",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "show msg ?",
         "property": "show_msg",
         "propertyType": "flow",
@@ -1232,15 +1287,15 @@
         "y": 320,
         "wires": [
             [
-                "72bed6719739a189"
+                "f071993300845c12"
             ],
             []
         ]
     },
     {
-        "id": "ed7da115b79532c5",
+        "id": "98a4882db08ebed0",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Initialize Predicate",
         "rules": [
             {
@@ -1261,14 +1316,14 @@
         "y": 260,
         "wires": [
             [
-                "8c706538c1fd3051"
+                "7beee9a001ac94d4"
             ]
         ]
     },
     {
-        "id": "8c706538c1fd3051",
+        "id": "7beee9a001ac94d4",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Store Local Predicate",
         "rules": [
             {
@@ -1292,9 +1347,9 @@
         ]
     },
     {
-        "id": "8f950b33340f6a37",
+        "id": "5bd223cdcb5c93b8",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "assign Predicate",
         "rules": [
             {
@@ -1317,19 +1372,19 @@
         ]
     },
     {
-        "id": "d2a0195e2249bc72",
+        "id": "8b860dc9a9999e76",
         "type": "comment",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "[part 2] Comand Control For Air Heater",
+        "z": "b4ac2e01b5986285",
+        "name": "[part 2] Commande de controle pour le chaud setpoint ",
         "info": "",
-        "x": 3790,
+        "x": 3840,
         "y": 260,
         "wires": []
     },
     {
-        "id": "ea4f602cf89917d1",
+        "id": "a6b26e00cb4407a3",
         "type": "change",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "Predicate Default Value",
         "rules": [
             {
@@ -1352,82 +1407,9 @@
         ]
     },
     {
-        "id": "324fc5b425d223c6",
-        "type": "link in",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "link in 1",
-        "links": [
-            "f0e6c1226cde0d16"
-        ],
-        "x": 155,
-        "y": 320,
-        "wires": [
-            [
-                "53600142469dc46d"
-            ]
-        ]
-    },
-    {
-        "id": "c66235204a16a8c4",
-        "type": "comment",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "Process_value",
-        "info": "",
-        "x": 140,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "53600142469dc46d",
-        "type": "easy-pid-controller",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "AEROTHERME PID",
-        "k_p": "1.4",
-        "k_i": "0.175",
-        "k_d": 0,
-        "sensor_type": "0-10V",
-        "dt": "60",
-        "range_min": 0,
-        "range_max": "10",
-        "x": 440,
-        "y": 240,
-        "wires": [
-            [
-                "80ebfbbe536ba41d"
-            ]
-        ]
-    },
-    {
-        "id": "83a41d7e1110c958",
-        "type": "change",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "add_topic",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "auto",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 220,
-        "y": 220,
-        "wires": [
-            [
-                "53600142469dc46d"
-            ]
-        ]
-    },
-    {
-        "id": "2f3f8b46ebad6ee4",
+        "id": "61430a5ead5c105b",
         "type": "inject",
-        "z": "0e7bf3a02f0be5b7",
+        "z": "b4ac2e01b5986285",
         "name": "",
         "props": [
             {
@@ -1449,36 +1431,222 @@
         "y": 220,
         "wires": [
             [
-                "83a41d7e1110c958"
+                "f9abcbd4017ee100"
             ]
         ]
     },
     {
-        "id": "9c395bd343168340",
-        "type": "debug",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "debug_dt",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 40,
+        "id": "f9abcbd4017ee100",
+        "type": "change",
+        "z": "b4ac2e01b5986285",
+        "name": "add_topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "auto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "86f736e109c86702"
+            ]
+        ]
+    },
+    {
+        "id": "6475ef2a7df951a7",
+        "type": "link in",
+        "z": "b4ac2e01b5986285",
+        "name": "link in 3",
+        "links": [
+            "f0e6c1226cde0d16"
+        ],
+        "x": 75,
+        "y": 420,
+        "wires": [
+            [
+                "edc80b88a43ae839"
+            ]
+        ]
+    },
+    {
+        "id": "61912971de626871",
+        "type": "comment",
+        "z": "b4ac2e01b5986285",
+        "name": "Process_value",
+        "info": "",
+        "x": 80,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "2b7166fafdde257e",
+        "id": "86f736e109c86702",
+        "type": "easy-pid-controller",
+        "z": "b4ac2e01b5986285",
+        "name": "AEROTHERME PID",
+        "k_p": "1.5",
+        "k_i": "0.19",
+        "k_d": 0,
+        "sensor_type": "0-10V",
+        "dt": "60",
+        "range_min": 0,
+        "range_max": "10",
+        "x": 460,
+        "y": 240,
+        "wires": [
+            [
+                "1a4b6f0aabc9ce9f"
+            ]
+        ]
+    },
+    {
+        "id": "e7c26dd00a7e8217",
+        "type": "link in",
+        "z": "b4ac2e01b5986285",
+        "name": "link in 4",
+        "links": [
+            "1c080549d24b1d58"
+        ],
+        "x": 75,
+        "y": 320,
+        "wires": [
+            [
+                "4f13434bdf2c97fa"
+            ]
+        ]
+    },
+    {
+        "id": "40542f0f10fe9845",
         "type": "comment",
-        "z": "0e7bf3a02f0be5b7",
-        "name": "Ensure Twining State",
+        "z": "b4ac2e01b5986285",
+        "name": "Set_point_value",
         "info": "",
-        "x": 220,
-        "y": 980,
+        "x": 80,
+        "y": 280,
         "wires": []
+    },
+    {
+        "id": "2e3963f1d3a1fda4",
+        "type": "change",
+        "z": "b4ac2e01b5986285",
+        "name": "add_topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "auto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f13434bdf2c97fa",
+        "type": "change",
+        "z": "b4ac2e01b5986285",
+        "name": "add_topic_SV",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SV",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "86f736e109c86702"
+            ]
+        ]
+    },
+    {
+        "id": "edc80b88a43ae839",
+        "type": "change",
+        "z": "b4ac2e01b5986285",
+        "name": "add_topic_PV",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PV",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "86f736e109c86702"
+            ]
+        ]
+    },
+    {
+        "id": "42834433e8cec0a6",
+        "type": "comment",
+        "z": "b4ac2e01b5986285",
+        "name": "Convert percentage in DC Voltage",
+        "info": "",
+        "x": 900,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "865f64a00c0a6785",
+        "type": "ui-template",
+        "z": "b4ac2e01b5986285",
+        "g": "b7a0feac79e7f0b6",
+        "group": "5464fa120c1ac1bc",
+        "page": "",
+        "ui": "",
+        "name": "Heat Pump Test Bench Synoptic",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <img :src=\"msg.payload\" style=\"width: 80vw; height: 80vh; objectif-fit: cover;\" />\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false\n            }\n        },\n        mounted() {\n            // Set mounted to true when the component is mounted\n            this.mounted = true\n        }\n    }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1990,
+        "y": 1220,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "a25d42467177cc20",
@@ -1587,7 +1755,7 @@
         "id": "eee8f9645d03834c",
         "type": "OPCUA-IIoT-Connector",
         "discoveryUrl": "",
-        "endpoint": "opc.tcp://72.168.36.240:4840/",
+        "endpoint": "opc.tcp://63.125.22.202:4840/",
         "endpointMustExist": false,
         "keepSessionAlive": true,
         "loginEnabled": false,
@@ -1608,6 +1776,20 @@
         "connectionStartDelay": "",
         "reconnectDelay": "",
         "maxBadSessionRequests": 10
+    },
+    {
+        "id": "5464fa120c1ac1bc",
+        "type": "ui-group",
+        "name": "Hot Water Circuit",
+        "page": "bde1577137aea246",
+        "width": "12",
+        "height": "3",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "6c2556a7412477cf",
@@ -1677,6 +1859,42 @@
             }
         ],
         "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bde1577137aea246",
+        "type": "ui-page",
+        "name": "Heat Pump Test Bench Synoptic",
+        "ui": "2eba3989bac8e2c1",
+        "path": "/hot_cycleHP",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "e8cbc83b09e58158",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
         "className": "",
         "visible": "true",
         "disabled": "false"
