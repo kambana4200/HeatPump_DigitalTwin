@@ -1,4 +1,4 @@
-## Node-RED Flow representing the DT of a Heat Pump Test Bench: Verzion 1 on 04 / 2025
+## Node-RED Flow representing the DT of a Heat Pump Test Bench: Verzion 1.1 on 05 / 2025
 
 ### Using this flow: import the .json file on a Node-RED Platform
 
