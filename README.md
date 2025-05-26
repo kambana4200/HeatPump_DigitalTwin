@@ -2,14 +2,14 @@
 
 ### Using this flow: import the .json file on a Node-RED Platform
 
-### Proposed Functionality on Human Machine Interface:
+### Proposed Functionalities on Human Machine Interface:
 
  1) Interactive dashboard of Heat Pump's Sensor and Actuator datas
  2) Sending Command Control to Heat Pump's Air-Heater
  3) Twin of a PID Corrector
     
 ### Digital Twins of HeatPump TestBench: Video showing the features offered
-https://github.com/user-attachments/assets/5a13334d-7fd6-4bc3-b247-20a3fbc5aa8a
+https://github.com/user-attachments/assets/91c18b2d-c334-4c93-810a-03699518f538
 
 ### Communication from and to the DT is encrypted (Privacy Precaution):
 This capture of network traffic to the DT allows to attest the sending of the SSL certificate to the DT with public key exchange
