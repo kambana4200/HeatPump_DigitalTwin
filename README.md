@@ -8,8 +8,8 @@
  2) Sending Command Control to Heat Pump's Air-Heater
  3) Twin of a PID Corrector
     
-### Digital Twins of HeatPump TestBench: Video showing the features offered
-https://github.com/user-attachments/assets/79e51f28-f19f-44a0-a811-ecf3480b351a
+### Digital Twin of HeatPump TestBench: Video showing prototype abilities
+https://github.com/user-attachments/assets/855f14a2-3ce6-40ec-b479-3d652717c19a
 
 ### Communication from and to the DT is encrypted (Data Confidentiality Precaution):
 This capture of network traffic to the DT allows to attest the sending of the SSL certificate to the DT with public key exchange
