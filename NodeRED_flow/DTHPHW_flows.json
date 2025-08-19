@@ -1,0 +1,4013 @@
+[
+    {
+        "id": "a66b2495f80b986d",
+        "type": "tab",
+        "label": "Feed_Data_DT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a1b1e8c8dbe9173f",
+        "type": "tab",
+        "label": "Virtual_Replica",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "938e49a71b2e4c18",
+        "type": "tab",
+        "label": "Download_DT_Cypher_Code",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1f5bc65e55fa91ea",
+        "type": "group",
+        "z": "a1b1e8c8dbe9173f",
+        "style": {
+            "stroke": "#b2b3bd",
+            "stroke-opacity": "1",
+            "fill": "#f2f3fb",
+            "fill-opacity": "0.5",
+            "label": true,
+            "label-position": "nw",
+            "color": "#32333b"
+        },
+        "nodes": [
+            "0707b6ac1bc8118b",
+            "144be1fa279420d2",
+            "5a52566c40700114",
+            "905440f6ea124de4",
+            "59c701b44da9b92f",
+            "b764f9a06a6f61e1"
+        ],
+        "x": 184,
+        "y": 1079,
+        "w": 1972,
+        "h": 82
+    },
+    {
+        "id": "eee8f9645d03834c",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://10.10.10.10:4840/",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "opcua_for_DT",
+        "showErrors": true,
+        "securityPolicy": "Basic256Sha256",
+        "securityMode": "SignAndEncrypt",
+        "individualCerts": true,
+        "publicCertificateFile": "/home/kambana/certificate/digitaltwincert.der",
+        "privateKeyFile": "/home/kambana/certificate/key2.pem",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": 10
+    },
+    {
+        "id": "8101d945.ea6768",
+        "type": "mqtt-broker",
+        "name": "Local MQTT",
+        "broker": "mqtt://localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dffcbfae.6e9d",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "e8cbc83b09e58158",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "2eba3989bac8e2c1",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true
+    },
+    {
+        "id": "48418b79.0f5834",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "dfb4a60f.d788f8",
+        "type": "ui_group",
+        "name": "Data Export",
+        "tab": "48418b79.0f5834",
+        "order": 1,
+        "disp": true,
+        "width": "12"
+    },
+    {
+        "id": "313f66c45e794323",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "073bf1f18e97e7fb",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "easypid",
+        "name": "easypid",
+        "usetls": false,
+        "tls": "dffcbfae.6e9d",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "6c2556a7412477cf",
+        "type": "ui-page",
+        "name": "Heat Pump Test Bench : Hot Water Circuit",
+        "ui": "2eba3989bac8e2c1",
+        "path": "/geohp",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "e8cbc83b09e58158",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "80316a8986ee7cb8",
+        "type": "ui-page",
+        "name": "Control Command for PID on Heat Pump Test Bench : Hot Water Circuit",
+        "ui": "2eba3989bac8e2c1",
+        "path": "/cmd",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "default",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bde1577137aea246",
+        "type": "ui-page",
+        "name": "Heat Pump Test Bench Synoptic",
+        "ui": "2eba3989bac8e2c1",
+        "path": "/hot_cycleHP",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "e8cbc83b09e58158",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "a25d42467177cc20",
+        "type": "ui-group",
+        "name": "Hot Water Circuit on Heat Pump (HP)",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a0e215310cdd5675",
+        "type": "ui-group",
+        "name": "Water Transit on Aerotherm",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "8ca5738ff35c72b1",
+        "type": "ui-group",
+        "name": "Heat Exchanger",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ee115ad3bbbb60e4",
+        "type": "ui-group",
+        "name": "Flowmeter Upstream Water Tank",
+        "page": "6c2556a7412477cf",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2bf1924fdb511b62",
+        "type": "ui-group",
+        "name": "PID Output",
+        "page": "80316a8986ee7cb8",
+        "width": "8",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7a06389195274203",
+        "type": "ui-group",
+        "name": "Control Aerotherm",
+        "page": "80316a8986ee7cb8",
+        "width": "4",
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "7f24ce6fabdc82f7",
+        "type": "ui-group",
+        "name": "Aerotherm Set Point Value on ICS",
+        "page": "80316a8986ee7cb8",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f0ca4e7aa89a1a77",
+        "type": "ui-group",
+        "name": "Aerotherm Set Point Value on DT",
+        "page": "80316a8986ee7cb8",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "5464fa120c1ac1bc",
+        "type": "ui-group",
+        "name": "Hot Water Circuit",
+        "page": "bde1577137aea246",
+        "width": "12",
+        "height": "3",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "18e98f1769fa2e81",
+        "type": "ui-spacer",
+        "group": "2bf1924fdb511b62",
+        "name": "Geothermal Heat Pump Perspective",
+        "tooltip": "",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "a6c6f0b4c438f98b",
+        "type": "ui-group",
+        "name": "DT's Sematic Model in a cypher file",
+        "page": "6c2556a7412477cf",
+        "width": "6",
+        "height": 1,
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "54e24bfe93e4e357",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.115.3:4840/",
+        "secpol": "Basic256Sha256",
+        "secmode": "SignAndEncrypt",
+        "none": false,
+        "login": false,
+        "usercert": true,
+        "usercertificate": "/home/digitaltwin/digital_twin_certificate/digitaltwincert.pem",
+        "userprivatekey": "/home/digitaltwin/digital_twin_certificate/key2.pem"
+    },
+    {
+        "id": "6d23db44.1697d4",
+        "type": "ui_tab",
+        "name": "Main Tab",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "eed4bf37.31aee",
+        "type": "ui_group",
+        "name": "[ Access Data of Class Room ]",
+        "tab": "6d23db44.1697d4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2236dfd1.c909e",
+        "type": "MySQLdatabase",
+        "name": "MOCK_URL",
+        "host": "http://10.10.10.10",
+        "port": "3360",
+        "db": "DTHPHW_BACKUP",
+        "tz": "",
+        "charset": ""
+    },
+    {
+        "id": "10007d04a3cf8a3b",
+        "type": "MySQLdatabase",
+        "name": "Local_Backup",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "DTHPHW_BACKUP",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "c796f87e0cfdd508",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Out Heat Exchanger",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7ac9250ccd96696e",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Out Aerotherme",
+        "info": "",
+        "x": 100,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d528063f9cd2ca4e",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Hot flowrate",
+        "info": "",
+        "x": 90,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4f73042dcba5f0f1",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Current",
+        "info": "",
+        "x": 70,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3c4dcdb918f1121e",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Hot Temp In ",
+        "info": "",
+        "x": 90,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "6249d66d72e4a7c9",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Hot Temp Out",
+        "info": "",
+        "x": 90,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "348652294339b9dd",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Aquis_Aerotherme",
+        "info": "",
+        "x": 110,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ec8740db50d483e3",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Control_Aerotherme",
+        "info": "",
+        "x": 110,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "8f8be956d241cda3",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "out heat exchanger",
+        "addressSpaceItems": [
+            {
+                "name": "out_heat_exchanger",
+                "nodeId": "ns=2;i=11",
+                "datatypeName": ""
+            }
+        ],
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "81bb07c28a432300"
+            ]
+        ]
+    },
+    {
+        "id": "81bb07c28a432300",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_out_HE",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "8e3ffc5ae3c958c6"
+            ]
+        ]
+    },
+    {
+        "id": "8e3ffc5ae3c958c6",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_out_HE",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 660,
+        "y": 100,
+        "wires": [
+            [
+                "2eace39f87ce16f9"
+            ]
+        ]
+    },
+    {
+        "id": "318a5f125eacb38e",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_out_aerotherme",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "fee6809088b59818"
+            ]
+        ]
+    },
+    {
+        "id": "fee6809088b59818",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_out_aerotherme",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 640,
+        "y": 220,
+        "wires": [
+            [
+                "f756806e02df2c4c"
+            ]
+        ]
+    },
+    {
+        "id": "1b9aabf9957361e2",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_Hot_Flowrate",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "40df2be31f1d8c34"
+            ]
+        ]
+    },
+    {
+        "id": "40df2be31f1d8c34",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_Hot_Flowrate",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "6caf6da938e1a7db"
+            ]
+        ]
+    },
+    {
+        "id": "430c63b5f23cdd9c",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_Current",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "e9cf3ff7a17bfa52"
+            ]
+        ]
+    },
+    {
+        "id": "e9cf3ff7a17bfa52",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_curent",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 630,
+        "y": 480,
+        "wires": [
+            [
+                "ea9e70bef85b21ff"
+            ]
+        ]
+    },
+    {
+        "id": "dd2bef21191b0bdc",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_Hot_Temp_In",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 360,
+        "y": 620,
+        "wires": [
+            [
+                "5f62f75cc186494e"
+            ]
+        ]
+    },
+    {
+        "id": "5f62f75cc186494e",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_Hot_Temp_In",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 640,
+        "y": 620,
+        "wires": [
+            [
+                "f1af5973d9a5ed26"
+            ]
+        ]
+    },
+    {
+        "id": "3534a746927dad0a",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_Hot_Temp_Out",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 640,
+        "y": 760,
+        "wires": [
+            [
+                "e24866282539456a"
+            ]
+        ]
+    },
+    {
+        "id": "1291aa96bf0e0a3e",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_Hot_Temp_Out",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 360,
+        "y": 760,
+        "wires": [
+            [
+                "3534a746927dad0a"
+            ]
+        ]
+    },
+    {
+        "id": "133c7e16e61818cc",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_acquis_aerotherme",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 470,
+        "y": 880,
+        "wires": [
+            [
+                "9f2148cdde79e6ef"
+            ]
+        ]
+    },
+    {
+        "id": "9f2148cdde79e6ef",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_acquis_aerotherme",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 770,
+        "y": 880,
+        "wires": [
+            [
+                "b404ab89d3441b36"
+            ]
+        ]
+    },
+    {
+        "id": "4bc1cf8a2010f9fc",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_CTRL_Aerotherme",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 470,
+        "y": 1020,
+        "wires": [
+            [
+                "39ef23710f1dc9fb"
+            ]
+        ]
+    },
+    {
+        "id": "39ef23710f1dc9fb",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_CTRL_aerotherme",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 770,
+        "y": 1020,
+        "wires": [
+            [
+                "6204d7534eb11703"
+            ]
+        ]
+    },
+    {
+        "id": "275150db5fcb77d6",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "out aerotherme",
+        "addressSpaceItems": [
+            {
+                "name": "out_aerotherme",
+                "nodeId": "ns=2;i=12",
+                "datatypeName": ""
+            }
+        ],
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "318a5f125eacb38e"
+            ]
+        ]
+    },
+    {
+        "id": "a3a3e24c6df8918e",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "Hot Flowrate",
+        "addressSpaceItems": [
+            {
+                "name": "hot_flowrate",
+                "nodeId": "ns=2;i=14",
+                "datatypeName": ""
+            }
+        ],
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "1b9aabf9957361e2"
+            ]
+        ]
+    },
+    {
+        "id": "3714fc9ca49bc999",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "Curent",
+        "addressSpaceItems": [
+            {
+                "name": "current",
+                "nodeId": "ns=2;i=17",
+                "datatypeName": ""
+            }
+        ],
+        "x": 100,
+        "y": 480,
+        "wires": [
+            [
+                "430c63b5f23cdd9c"
+            ]
+        ]
+    },
+    {
+        "id": "39aabd6c0f0be7aa",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "Hot Temp In",
+        "addressSpaceItems": [
+            {
+                "name": "hot_temp_in_HP",
+                "nodeId": "ns=2;i=18",
+                "datatypeName": ""
+            }
+        ],
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "dd2bef21191b0bdc"
+            ]
+        ]
+    },
+    {
+        "id": "f31cd25376b55931",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "Hot Temp Out",
+        "addressSpaceItems": [
+            {
+                "name": "hot_temp_out_HP",
+                "nodeId": "ns=2;i=20",
+                "datatypeName": ""
+            }
+        ],
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "1291aa96bf0e0a3e"
+            ]
+        ]
+    },
+    {
+        "id": "06a6a3b307d221a1",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "AQUI_Temp_Aerotherme",
+        "addressSpaceItems": [
+            {
+                "name": "aquis_aerotherme",
+                "nodeId": "ns=2;i=22",
+                "datatypeName": ""
+            }
+        ],
+        "x": 160,
+        "y": 880,
+        "wires": [
+            [
+                "133c7e16e61818cc"
+            ]
+        ]
+    },
+    {
+        "id": "8caa7117d38c9e4d",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "CTRL_Temp_Aerotherme",
+        "addressSpaceItems": [
+            {
+                "name": "ctrl_aerotherme",
+                "nodeId": "ns=2;i=27",
+                "datatypeName": ""
+            }
+        ],
+        "x": 160,
+        "y": 1020,
+        "wires": [
+            [
+                "4bc1cf8a2010f9fc"
+            ]
+        ]
+    },
+    {
+        "id": "4e539a1a0910bbd3",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "HE values",
+        "mode": "link",
+        "links": [
+            "503a247c2f482a4e"
+        ],
+        "x": 1195,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "66fab82d71ae5030",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "aerotherme values",
+        "mode": "link",
+        "links": [
+            "4a5b89fc6fe90fe5"
+        ],
+        "x": 1205,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6762371cceb4b2bc",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "hot flowrate values",
+        "mode": "link",
+        "links": [
+            "3872c437729854ba"
+        ],
+        "x": 1195,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ef1b3413086d5d02",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "current values",
+        "mode": "link",
+        "links": [],
+        "x": 1185,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "62078e9ef2de4360",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "Hot_temp_in_values",
+        "mode": "link",
+        "links": [
+            "d4d2a7f02089657f"
+        ],
+        "x": 1175,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e67887f83e665218",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "hot_temp_out_values",
+        "mode": "link",
+        "links": [
+            "063ec2e8c35edb72"
+        ],
+        "x": 1195,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7b3b75061c72d95a",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "acquis_aerotherme_values",
+        "mode": "link",
+        "links": [
+            "c99b281d9daf0d44",
+            "891c8a019a241904"
+        ],
+        "x": 1235,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "0465efe640bd22e2",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "ctrl_aerotherme_values",
+        "mode": "link",
+        "links": [
+            "43b5246bf4dc82d0",
+            "205c2f42488f2566"
+        ],
+        "x": 1275,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "2eace39f87ce16f9",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 100,
+        "wires": [
+            [
+                "4e539a1a0910bbd3",
+                "2ac9919.fbaf86e"
+            ]
+        ]
+    },
+    {
+        "id": "f756806e02df2c4c",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 220,
+        "wires": [
+            [
+                "66fab82d71ae5030",
+                "70c10b8081f721a1"
+            ]
+        ]
+    },
+    {
+        "id": "6caf6da938e1a7db",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 340,
+        "wires": [
+            [
+                "6762371cceb4b2bc",
+                "589ea2faf0657593"
+            ]
+        ]
+    },
+    {
+        "id": "ea9e70bef85b21ff",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 480,
+        "wires": [
+            [
+                "ef1b3413086d5d02"
+            ]
+        ]
+    },
+    {
+        "id": "f1af5973d9a5ed26",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 620,
+        "wires": [
+            [
+                "62078e9ef2de4360",
+                "a974fe516e6c4ad9"
+            ]
+        ]
+    },
+    {
+        "id": "e24866282539456a",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 760,
+        "wires": [
+            [
+                "e67887f83e665218",
+                "58d103ac9409e49c"
+            ]
+        ]
+    },
+    {
+        "id": "b404ab89d3441b36",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 880,
+        "wires": [
+            [
+                "7b3b75061c72d95a",
+                "5b15fb0131fdc90e"
+            ]
+        ]
+    },
+    {
+        "id": "6204d7534eb11703",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 1020,
+        "wires": [
+            [
+                "0465efe640bd22e2",
+                "5ab67519e893d778"
+            ]
+        ]
+    },
+    {
+        "id": "68154bfcf3f38a96",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a66b2495f80b986d",
+        "injectType": "read",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "0",
+        "name": "Process_value",
+        "addressSpaceItems": [
+            {
+                "name": "process_value",
+                "nodeId": "ns=2;i=24",
+                "datatypeName": ""
+            }
+        ],
+        "x": 120,
+        "y": 1140,
+        "wires": [
+            [
+                "1add350afb77b4f4"
+            ]
+        ]
+    },
+    {
+        "id": "7a96cd2698452f96",
+        "type": "comment",
+        "z": "a66b2495f80b986d",
+        "name": "Process_Value",
+        "info": "",
+        "x": 100,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "1add350afb77b4f4",
+        "type": "OPCUA-IIoT-Read",
+        "z": "a66b2495f80b986d",
+        "attributeId": "13",
+        "maxAge": "0",
+        "depth": 1,
+        "connector": "eee8f9645d03834c",
+        "name": "Read_CTRL_Aerotherme",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "parseStrings": false,
+        "historyDays": 1,
+        "x": 430,
+        "y": 1140,
+        "wires": [
+            [
+                "ca0d2d8a0604db0f"
+            ]
+        ]
+    },
+    {
+        "id": "ca0d2d8a0604db0f",
+        "type": "OPCUA-IIoT-Response",
+        "z": "a66b2495f80b986d",
+        "name": "Response_CTRL_aerotherme",
+        "compressStructure": true,
+        "showStatusActivities": false,
+        "showErrors": true,
+        "activateUnsetFilter": false,
+        "activateFilters": false,
+        "negateFilter": false,
+        "filters": [],
+        "x": 770,
+        "y": 1140,
+        "wires": [
+            [
+                "6f3509a75dfee552"
+            ]
+        ]
+    },
+    {
+        "id": "6f3509a75dfee552",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "value_0s_patch",
+        "func": "// cas de la valeur 0 \nif (typeof msg.payload.value[0].value.value !== 'undefined' && msg.payload.value[0].value.value !== null && !isNaN(msg.payload.value[0].value.value)){\n    //redefinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value.value * 1000)/1000;\n    return msg;\n}\nelse { // cas de toute autre valeur\n    //redéfinir le payload à renvoyer\n    msg.payload = Math.floor(msg.payload.value[0].value * 1000)/1000;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 1140,
+        "wires": [
+            [
+                "ec1bd107abbc0f69",
+                "cca70a8604401f95"
+            ]
+        ]
+    },
+    {
+        "id": "ec1bd107abbc0f69",
+        "type": "link out",
+        "z": "a66b2495f80b986d",
+        "name": "process_values",
+        "mode": "link",
+        "links": [
+            "05c41a9359b24633"
+        ],
+        "x": 1285,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "5b15fb0131fdc90e",
+        "type": "ui-template",
+        "z": "a66b2495f80b986d",
+        "group": "7f24ce6fabdc82f7",
+        "page": "",
+        "ui": "",
+        "name": "SetPointValue_ICS",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<style>\n    .badge {\n        display: inline-block;\n        padding: 10px 20px;\n        border-radius: 25px;\n        background-color: #30c0c6;\n        color: white;\n        font-size: 18px;\n        text-align: center;\n        margin: 5px;\n    }\n</style>\n\n<div class=\"badge\">\n    Temperature : <strong>{{msg.payload}} °C</strong>\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1270,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ab67519e893d778",
+        "type": "ui-template",
+        "z": "a66b2495f80b986d",
+        "group": "f0ca4e7aa89a1a77",
+        "page": "",
+        "ui": "",
+        "name": "SetPointValue_DT",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<style>\n    .badge1 {\n        display: inline-block;\n        padding: 10px 20px;\n        border-radius: 25px;\n        background-color: #2196F3;\n        color: white;\n        font-size: 18px;\n        text-align: center;\n        margin: 5px;\n    }\n</style>\n\n<div class=\"badge1\">\n    Temperature : <strong>{{msg.payload}} °C</strong>\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1250,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ac9919.fbaf86e",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "INSERT",
+        "func": "// Récupérer la valeur depuis le msg.payload\nlet val = msg.payload;\n\n// Générer la requête MariaDB en utilisant val\nlet query = `\n-- Début de transaction\nSTART TRANSACTION;\n\n-- Déclaration de la variable pour stocker la dernière valeur\nSET @last_val := (\n    SELECT temp_out_HE\n    FROM DTHPHW_BACKUP.dt_data\n    ORDER BY id DESC\n    LIMIT 1\n);\n\n-- Si la table est vide, insérer val\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, ${val}, 0, 0, 0\nWHERE @last_val IS NULL;\n\n-- Si la dernière valeur est 0.0, la mettre à jour\nUPDATE DTHPHW_BACKUP.dt_data\nSET temp_out_HE = ${val}\nWHERE id = (\n    SELECT id FROM (\n        SELECT id\n        FROM DTHPHW_BACKUP.dt_data\n        ORDER BY id DESC\n        LIMIT 1\n    ) AS subquery\n)\nAND @last_val = 0.0;\n\n-- Si la dernière valeur est différente de 0.0, insérer une nouvelle ligne\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, ${val}, 0, 0, 0\nWHERE @last_val IS NOT NULL AND @last_val <> 0.0;\n\nCOMMIT;\n`;\n\n// Passer la requête au msg.topic pour le noeud MariaDB\nmsg.topic = query;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 160,
+        "wires": [
+            [
+                "fdbcc9a.f22b838"
+            ]
+        ]
+    },
+    {
+        "id": "fdbcc9a.f22b838",
+        "type": "mysql",
+        "z": "a66b2495f80b986d",
+        "mydb": "",
+        "name": "",
+        "x": 1670,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cca70a8604401f95",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "INSERT",
+        "func": "// Récupérer la valeur depuis le msg.payload\nlet val = msg.payload;\n\n// Générer la requête MariaDB en utilisant val\nlet query = `\n-- Début de transaction\nSTART TRANSACTION;\n\n-- Déclaration de la variable pour stocker la dernière valeur\nSET @last_val := (\n    SELECT temp_out_HE\n    FROM DTHPHW_BACKUP.dt_data\n    ORDER BY id DESC\n    LIMIT 1\n);\n\n-- Si la table est vide, insérer val\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT ${val}, 0, 0, 0, 0, 0\nWHERE @last_val IS NULL;\n\n-- Si la dernière valeur est 0.0, la mettre à jour\nUPDATE DTHPHW_BACKUP.dt_data\nSET process_value = ${val}\nWHERE id = (\n    SELECT id FROM (\n        SELECT id\n        FROM DTHPHW_BACKUP.dt_data\n        ORDER BY id DESC\n        LIMIT 1\n    ) AS subquery\n)\nAND @last_val = 0.0;\n\n-- Si la dernière valeur est différente de 0.0, insérer une nouvelle ligne\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT ${val}, 0, 0, 0, 0, 0\nWHERE @last_val IS NOT NULL AND @last_val <> 0.0;\n\nCOMMIT;\n`;\n\n// Passer la requête au msg.topic pour le noeud MariaDB\nmsg.topic = query;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 1200,
+        "wires": [
+            [
+                "fdbcc9a.f22b838"
+            ]
+        ]
+    },
+    {
+        "id": "70c10b8081f721a1",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "INSERT",
+        "func": "// Récupérer la valeur depuis le msg.payload\nlet val = msg.payload;\n\n// Générer la requête MariaDB en utilisant val\nlet query = `\n-- Début de transaction\nSTART TRANSACTION;\n\n-- Déclaration de la variable pour stocker la dernière valeur\nSET @last_val := (\n    SELECT temp_out_HE\n    FROM DTHPHW_BACKUP.dt_data\n    ORDER BY id DESC\n    LIMIT 1\n);\n\n-- Si la table est vide, insérer val\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, ${val}, 0, 0, 0, 0\nWHERE @last_val IS NULL;\n\n-- Si la dernière valeur est 0.0, la mettre à jour\nUPDATE DTHPHW_BACKUP.dt_data\nSET temp_out_aerotherm = ${val}\nWHERE id = (\n    SELECT id FROM (\n        SELECT id\n        FROM DTHPHW_BACKUP.dt_data\n        ORDER BY id DESC\n        LIMIT 1\n    ) AS subquery\n)\nAND @last_val = 0.0;\n\n-- Si la dernière valeur est différente de 0.0, insérer une nouvelle ligne\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, ${val}, 0, 0, 0, 0\nWHERE @last_val IS NOT NULL AND @last_val <> 0.0;\n\nCOMMIT;\n`;\n\n// Passer la requête au msg.topic pour le noeud MariaDB\nmsg.topic = query;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 280,
+        "wires": [
+            [
+                "fdbcc9a.f22b838"
+            ]
+        ]
+    },
+    {
+        "id": "589ea2faf0657593",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "INSERT",
+        "func": "// Récupérer la valeur depuis le msg.payload\nlet val = msg.payload;\n\n// Générer la requête MariaDB en utilisant val\nlet query = `\n-- Début de transaction\nSTART TRANSACTION;\n\n-- Déclaration de la variable pour stocker la dernière valeur\nSET @last_val := (\n    SELECT temp_out_HE\n    FROM DTHPHW_BACKUP.dt_data\n    ORDER BY id DESC\n    LIMIT 1\n);\n\n-- Si la table est vide, insérer val\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, 0, ${val}, 0, 0\nWHERE @last_val IS NULL;\n\n-- Si la dernière valeur est 0.0, la mettre à jour\nUPDATE DTHPHW_BACKUP.dt_data\nSET flowrate = ${val}\nWHERE id = (\n    SELECT id FROM (\n        SELECT id\n        FROM DTHPHW_BACKUP.dt_data\n        ORDER BY id DESC\n        LIMIT 1\n    ) AS subquery\n)\nAND @last_val = 0.0;\n\n-- Si la dernière valeur est différente de 0.0, insérer une nouvelle ligne\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, 0, ${val}, 0, 0\nWHERE @last_val IS NOT NULL AND @last_val <> 0.0;\n\nCOMMIT;\n`;\n\n// Passer la requête au msg.topic pour le noeud MariaDB\nmsg.topic = query;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 400,
+        "wires": [
+            [
+                "fdbcc9a.f22b838"
+            ]
+        ]
+    },
+    {
+        "id": "a974fe516e6c4ad9",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "INSERT",
+        "func": "// Récupérer la valeur depuis le msg.payload\nlet val = msg.payload;\n\n// Générer la requête MariaDB en utilisant val\nlet query = `\n-- Début de transaction\nSTART TRANSACTION;\n\n-- Déclaration de la variable pour stocker la dernière valeur\nSET @last_val := (\n    SELECT temp_out_HE\n    FROM DTHPHW_BACKUP.dt_data\n    ORDER BY id DESC\n    LIMIT 1\n);\n\n-- Si la table est vide, insérer val\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, 0, 0, ${val}, 0\nWHERE @last_val IS NULL;\n\n-- Si la dernière valeur est 0.0, la mettre à jour\nUPDATE DTHPHW_BACKUP.dt_data\nSET temp_in_hot_HP = ${val}\nWHERE id = (\n    SELECT id FROM (\n        SELECT id\n        FROM DTHPHW_BACKUP.dt_data\n        ORDER BY id DESC\n        LIMIT 1\n    ) AS subquery\n)\nAND @last_val = 0.0;\n\n-- Si la dernière valeur est différente de 0.0, insérer une nouvelle ligne\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, 0, 0, ${val}, 0\nWHERE @last_val IS NOT NULL AND @last_val <> 0.0;\n\nCOMMIT;\n`;\n\n// Passer la requête au msg.topic pour le noeud MariaDB\nmsg.topic = query;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 680,
+        "wires": [
+            [
+                "fdbcc9a.f22b838"
+            ]
+        ]
+    },
+    {
+        "id": "58d103ac9409e49c",
+        "type": "function",
+        "z": "a66b2495f80b986d",
+        "name": "INSERT",
+        "func": "// Récupérer la valeur depuis le msg.payload\nlet val = msg.payload;\n\n// Générer la requête MariaDB en utilisant val\nlet query = `\n-- Début de transaction\nSTART TRANSACTION;\n\n-- Déclaration de la variable pour stocker la dernière valeur\nSET @last_val := (\n    SELECT temp_out_HE\n    FROM DTHPHW_BACKUP.dt_data\n    ORDER BY id DESC\n    LIMIT 1\n);\n\n-- Si la table est vide, insérer val\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, 0, 0, 0, ${val}\nWHERE @last_val IS NULL;\n\n-- Si la dernière valeur est 0.0, la mettre à jour\nUPDATE DTHPHW_BACKUP.dt_data\nSET temp_out_hot_HP = ${val}\nWHERE id = (\n    SELECT id FROM (\n        SELECT id\n        FROM DTHPHW_BACKUP.dt_data\n        ORDER BY id DESC\n        LIMIT 1\n    ) AS subquery\n)\nAND @last_val = 0.0;\n\n-- Si la dernière valeur est différente de 0.0, insérer une nouvelle ligne\nINSERT INTO DTHPHW_BACKUP.dt_data (process_value, temp_out_aerotherm, temp_out_HE, flowrate, temp_in_hot_HP, temp_out_hot_HP)\nSELECT 0, 0, 0, 0, 0, ${val}\nWHERE @last_val IS NOT NULL AND @last_val <> 0.0;\n\nCOMMIT;\n`;\n\n// Passer la requête au msg.topic pour le noeud MariaDB\nmsg.topic = query;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 820,
+        "wires": [
+            [
+                "fdbcc9a.f22b838"
+            ]
+        ]
+    },
+    {
+        "id": "5637d1e6f9bd1eb5",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Asservissement PID",
+        "info": "",
+        "x": 110,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d1baeabcef67f0ca",
+        "type": "inject",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "32cdfd4354c8701f"
+            ]
+        ]
+    },
+    {
+        "id": "32cdfd4354c8701f",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "add_topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "auto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 240,
+        "wires": [
+            [
+                "329d1489160a3f4c"
+            ]
+        ]
+    },
+    {
+        "id": "db4a491240ea74eb",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Set_point_value",
+        "info": "",
+        "x": 100,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "43b5246bf4dc82d0",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "link in 4",
+        "links": [
+            "0465efe640bd22e2"
+        ],
+        "x": 95,
+        "y": 340,
+        "wires": [
+            [
+                "9ee46d72c1d81f2c"
+            ]
+        ]
+    },
+    {
+        "id": "9ee46d72c1d81f2c",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "add_topic_SV",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SV",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 340,
+        "wires": [
+            [
+                "329d1489160a3f4c"
+            ]
+        ]
+    },
+    {
+        "id": "52f110c729f6de55",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Process_value",
+        "info": "",
+        "x": 100,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "05c41a9359b24633",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "link in 5",
+        "links": [
+            "ec1bd107abbc0f69"
+        ],
+        "x": 95,
+        "y": 440,
+        "wires": [
+            [
+                "0b464d08ece888dd"
+            ]
+        ]
+    },
+    {
+        "id": "0b464d08ece888dd",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "add_topic_PV",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PV",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 440,
+        "wires": [
+            [
+                "329d1489160a3f4c"
+            ]
+        ]
+    },
+    {
+        "id": "329d1489160a3f4c",
+        "type": "easy-pid-controller",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "AEROTHERME PID",
+        "k_p": "1.5",
+        "k_i": "0.19",
+        "k_d": 0,
+        "sensor_type": "0-10V",
+        "dt": "60",
+        "range_min": 0,
+        "range_max": "10",
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "055e6d39ab30f762"
+            ]
+        ]
+    },
+    {
+        "id": "055e6d39ab30f762",
+        "type": "function",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Value",
+        "func": "var op = msg.payload.Value;\n\nmsg.payload = op; \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "0",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "352dfb3bd08a0e9a"
+            ]
+        ]
+    },
+    {
+        "id": "352dfb3bd08a0e9a",
+        "type": "range",
+        "z": "a1b1e8c8dbe9173f",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "0",
+        "maxout": "10",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "mapping PID entry values ",
+        "x": 910,
+        "y": 260,
+        "wires": [
+            [
+                "1067e1a959276e82",
+                "8bcc11aa07a406a8"
+            ]
+        ]
+    },
+    {
+        "id": "1067e1a959276e82",
+        "type": "ui-chart",
+        "z": "a1b1e8c8dbe9173f",
+        "group": "2bf1924fdb511b62",
+        "name": "PID Control Graph",
+        "label": "Line Chart of the DC voltage produced by the the PID controller's Digital Twin",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Voltage for Propotional Actuator (in V)",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "8",
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 950,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "063ec2e8c35edb72",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get_hot_temp_out",
+        "links": [
+            "e67887f83e665218"
+        ],
+        "x": 355,
+        "y": 600,
+        "wires": [
+            [
+                "c07c0965f157fe06",
+                "4ffa56b8bdcc2e51"
+            ]
+        ]
+    },
+    {
+        "id": "d4d2a7f02089657f",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get_hot_temp_in",
+        "links": [
+            "62078e9ef2de4360"
+        ],
+        "x": 135,
+        "y": 740,
+        "wires": [
+            [
+                "849433c8d76a5b23",
+                "1c835148659b48df"
+            ]
+        ]
+    },
+    {
+        "id": "4a5b89fc6fe90fe5",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get temp aerotherme",
+        "links": [
+            "66fab82d71ae5030"
+        ],
+        "x": 1515,
+        "y": 380,
+        "wires": [
+            [
+                "fee94ee2f909a36e",
+                "237d9480362468d4"
+            ]
+        ]
+    },
+    {
+        "id": "503a247c2f482a4e",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get HE",
+        "links": [
+            "4e539a1a0910bbd3"
+        ],
+        "x": 1605,
+        "y": 720,
+        "wires": [
+            [
+                "08211117888c926e",
+                "bc3443314cda0b2d"
+            ]
+        ]
+    },
+    {
+        "id": "f88145aa066f368a",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "[part 1] Command Control for HW setpoint ",
+        "info": "",
+        "x": 2340,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "be6460e3e24d65f1",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Initialize Predicate RTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "compute_RTT",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2350,
+        "y": 380,
+        "wires": [
+            [
+                "b98bf52f9f7c484e"
+            ]
+        ]
+    },
+    {
+        "id": "b98bf52f9f7c484e",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Store Local Predicate RTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "compute_RTT",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2620,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d69d85a82f6d0b2a",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Initialize Predicate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2330,
+        "y": 440,
+        "wires": [
+            [
+                "d28aa309311c504d"
+            ]
+        ]
+    },
+    {
+        "id": "d28aa309311c504d",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Store Local Predicate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2600,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be23faf3308ec268",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "initialize variable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SetPointInChaud",
+                "pt": "flow",
+                "to": "0.0",
+                "tot": "num",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2320,
+        "y": 500,
+        "wires": [
+            [
+                "f398946826abcd23"
+            ]
+        ]
+    },
+    {
+        "id": "f398946826abcd23",
+        "type": "ui-form",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Aerotherm PID Set Point",
+        "group": "7a06389195274203",
+        "label": "",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "options": [
+            {
+                "label": "Set Point Values (Lower than 35°C)",
+                "key": "set_point_aerotherme",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "set_point_aerotherme": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "resetOnSubmit": true,
+        "topic": "payload",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 2550,
+        "y": 500,
+        "wires": [
+            [
+                "efd33357d3aad054"
+            ]
+        ]
+    },
+    {
+        "id": "efd33357d3aad054",
+        "type": "switch",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "",
+        "property": "payload.set_point_aerotherme",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "35",
+                "vt": "str"
+            },
+            {
+                "t": "gt",
+                "v": "valeur au dessus du seuil accepte",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2740,
+        "y": 500,
+        "wires": [
+            [
+                "59e8d171c485bcbe"
+            ],
+            [
+                "105700acaab68d0e"
+            ]
+        ]
+    },
+    {
+        "id": "59e8d171c485bcbe",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Store Input Data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SetPointInChaud",
+                "pt": "flow",
+                "to": "payload.set_point_aerotherme",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2900,
+        "y": 500,
+        "wires": [
+            [
+                "f4a4e797215ac8e1"
+            ]
+        ]
+    },
+    {
+        "id": "f4a4e797215ac8e1",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "assign Predicate",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3110,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "105700acaab68d0e",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "danger_msg",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Danger !",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "CANNOT SEND THIS INPUT VALUE",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2890,
+        "y": 620,
+        "wires": [
+            [
+                "6fed5b0f963eac75"
+            ]
+        ]
+    },
+    {
+        "id": "6fed5b0f963eac75",
+        "type": "ui-notification",
+        "z": "a1b1e8c8dbe9173f",
+        "ui": "2eba3989bac8e2c1",
+        "position": "top right",
+        "colorDefault": false,
+        "color": "#ea5353",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Command out of bounds",
+        "x": 3150,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d27e8484c4776910",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "[part 2] Command Control for HW setpoint ",
+        "info": "",
+        "x": 3460,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "72189750323e9bbd",
+        "type": "OPCUA-IIoT-Inject",
+        "z": "a1b1e8c8dbe9173f",
+        "injectType": "write",
+        "payload": "SetPointInChaud",
+        "payloadType": "flow",
+        "topic": "",
+        "repeat": "0.9",
+        "crontab": "",
+        "once": false,
+        "startDelay": "",
+        "name": "Inject cmd aerotherme",
+        "addressSpaceItems": [
+            {
+                "name": "SetPointInChaud",
+                "nodeId": "ns=2;i=27",
+                "datatypeName": "Float"
+            }
+        ],
+        "x": 3430,
+        "y": 500,
+        "wires": [
+            [
+                "c563502b0166b70c"
+            ]
+        ]
+    },
+    {
+        "id": "c563502b0166b70c",
+        "type": "OPCUA-IIoT-Write",
+        "z": "a1b1e8c8dbe9173f",
+        "connector": "eee8f9645d03834c",
+        "name": "Write_cmd_ctrl",
+        "justValue": true,
+        "showStatusActivities": false,
+        "showErrors": false,
+        "x": 3720,
+        "y": 500,
+        "wires": [
+            [
+                "908e80a90aa57667"
+            ]
+        ]
+    },
+    {
+        "id": "908e80a90aa57667",
+        "type": "switch",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "show msg ?",
+        "property": "show_msg",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3930,
+        "y": 500,
+        "wires": [
+            [
+                "9495cd357063be8c",
+                "3f4ad8a69ef4d190"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9495cd357063be8c",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "confirm_msg",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Aerotherme Set Point",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "COMMAND SENT TO AEROTHERME",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4130,
+        "y": 500,
+        "wires": [
+            [
+                "aea7bd7bc1a519f7"
+            ]
+        ]
+    },
+    {
+        "id": "3f4ad8a69ef4d190",
+        "type": "function",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get_date_sending_command",
+        "func": "msg.payload = new Date().toISOString();\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4160,
+        "y": 580,
+        "wires": [
+            [
+                "a3f9c66bdf7cfb95"
+            ]
+        ]
+    },
+    {
+        "id": "aea7bd7bc1a519f7",
+        "type": "ui-notification",
+        "z": "a1b1e8c8dbe9173f",
+        "ui": "2eba3989bac8e2c1",
+        "position": "top right",
+        "colorDefault": false,
+        "color": "#00bfff",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Confirm ctrl",
+        "x": 4310,
+        "y": 500,
+        "wires": [
+            [
+                "cd08ba39448d2131"
+            ]
+        ]
+    },
+    {
+        "id": "cd08ba39448d2131",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Predicate Default Value",
+        "rules": [
+            {
+                "t": "set",
+                "p": "show_msg",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4550,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3f9c66bdf7cfb95",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Begin_Compute_RTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "compute_RTT",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4480,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2da4a2458ccba061",
+        "type": "debug",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "DATE ENVOIE CMD",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4480,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "cc353375edaf9142",
+        "type": "switch",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "compute_RTT?",
+        "property": "compute_RTT",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3680,
+        "y": 720,
+        "wires": [
+            [
+                "762bee548991203d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c99b281d9daf0d44",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "link in 6",
+        "links": [
+            "7b3b75061c72d95a"
+        ],
+        "x": 3425,
+        "y": 680,
+        "wires": [
+            [
+                "cc353375edaf9142"
+            ]
+        ]
+    },
+    {
+        "id": "762bee548991203d",
+        "type": "function",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get_date_feedback_command",
+        "func": "msg.payload = new Date().toISOString();\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4010,
+        "y": 720,
+        "wires": [
+            [
+                "e8b3d17155c69e3f"
+            ]
+        ]
+    },
+    {
+        "id": "e8b3d17155c69e3f",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Stop_Compute_RTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "compute_RTT",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4360,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7d0608c7da3887e",
+        "type": "debug",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "DATE FEEDBACK CMD",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 4350,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "3872c437729854ba",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get hot flowrate",
+        "links": [
+            "6762371cceb4b2bc"
+        ],
+        "x": 2125,
+        "y": 700,
+        "wires": [
+            [
+                "4fd09d93f026c9ca",
+                "3dec46c8e0969e3d"
+            ]
+        ]
+    },
+    {
+        "id": "891c8a019a241904",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get_acquis_aerotherme_values",
+        "links": [
+            "7b3b75061c72d95a"
+        ],
+        "x": 45,
+        "y": 1300,
+        "wires": [
+            [
+                "d42ef7beec0672d4"
+            ]
+        ]
+    },
+    {
+        "id": "d42ef7beec0672d4",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "val_aerotherme_aquisition",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "val_aerotherme_aquisition",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 1300,
+        "wires": [
+            [
+                "0b6ea2f136bc1968"
+            ]
+        ]
+    },
+    {
+        "id": "205c2f42488f2566",
+        "type": "link in",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "get_ctrl_aerotherme_values",
+        "links": [
+            "0465efe640bd22e2"
+        ],
+        "x": 45,
+        "y": 1380,
+        "wires": [
+            [
+                "c4cab888bfc2291a"
+            ]
+        ]
+    },
+    {
+        "id": "c4cab888bfc2291a",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "val_aerotherme_control",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "val_aerotherme_control",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 1380,
+        "wires": [
+            [
+                "0b6ea2f136bc1968"
+            ]
+        ]
+    },
+    {
+        "id": "0b6ea2f136bc1968",
+        "type": "Comparator",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Comparator",
+        "property": "payload",
+        "math": "===",
+        "topic1": "val_aerotherme_aquisition",
+        "topic2": "val_aerotherme_control",
+        "x": 740,
+        "y": 1320,
+        "wires": [
+            [
+                "c91f52391eea28c4"
+            ]
+        ]
+    },
+    {
+        "id": "c91f52391eea28c4",
+        "type": "switch",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "predicate",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 1320,
+        "wires": [
+            [
+                "dd8d12abd66bb10e"
+            ]
+        ]
+    },
+    {
+        "id": "dd8d12abd66bb10e",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "warning_msg1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Warning : Quadrature Phase Twinning ",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "WARNING :  DT full controls the physical equipements",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 1320,
+        "wires": [
+            [
+                "48210202c3b4e738"
+            ]
+        ]
+    },
+    {
+        "id": "48210202c3b4e738",
+        "type": "ui-notification",
+        "z": "a1b1e8c8dbe9173f",
+        "ui": "2eba3989bac8e2c1",
+        "position": "bottom center",
+        "colorDefault": false,
+        "color": "#f9f06b",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Twinning State",
+        "x": 1390,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0707b6ac1bc8118b",
+        "type": "inject",
+        "z": "a1b1e8c8dbe9173f",
+        "g": "1f5bc65e55fa91ea",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 1120,
+        "wires": [
+            [
+                "144be1fa279420d2"
+            ]
+        ]
+    },
+    {
+        "id": "144be1fa279420d2",
+        "type": "file in",
+        "z": "a1b1e8c8dbe9173f",
+        "g": "1f5bc65e55fa91ea",
+        "name": "",
+        "filename": "/home/kambana/img/DT.png",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 530,
+        "y": 1120,
+        "wires": [
+            [
+                "59c701b44da9b92f"
+            ]
+        ]
+    },
+    {
+        "id": "5a52566c40700114",
+        "type": "change",
+        "z": "a1b1e8c8dbe9173f",
+        "g": "1f5bc65e55fa91ea",
+        "name": "Add the file type to the mimetype, add to image content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mimetype",
+                "pt": "msg",
+                "to": "\"data:image/\"&msg.filetype&\";base64,\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "output",
+                "pt": "msg",
+                "to": "msg.mimetype&msg.payload",
+                "tot": "jsonata"
+            },
+            {
+                "t": "move",
+                "p": "output",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1120,
+        "wires": [
+            [
+                "b764f9a06a6f61e1"
+            ]
+        ]
+    },
+    {
+        "id": "905440f6ea124de4",
+        "type": "string",
+        "z": "a1b1e8c8dbe9173f",
+        "g": "1f5bc65e55fa91ea",
+        "name": "Get file type from file name",
+        "methods": [
+            {
+                "name": "getRightMost",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "."
+                    }
+                ]
+            }
+        ],
+        "prop": "filename",
+        "propout": "filetype",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 1250,
+        "y": 1120,
+        "wires": [
+            [
+                "5a52566c40700114"
+            ]
+        ]
+    },
+    {
+        "id": "59c701b44da9b92f",
+        "type": "base64",
+        "z": "a1b1e8c8dbe9173f",
+        "g": "1f5bc65e55fa91ea",
+        "name": "Convert Buffer to Base 64 String",
+        "action": "",
+        "property": "payload",
+        "x": 900,
+        "y": 1120,
+        "wires": [
+            [
+                "905440f6ea124de4"
+            ]
+        ]
+    },
+    {
+        "id": "b764f9a06a6f61e1",
+        "type": "ui-template",
+        "z": "a1b1e8c8dbe9173f",
+        "g": "1f5bc65e55fa91ea",
+        "group": "5464fa120c1ac1bc",
+        "page": "",
+        "ui": "",
+        "name": "Heat Pump Test Bench Synoptic",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <img :src=\"msg.payload\" style=\"width: 70vw; height: 80vh; objectif-fit: cover;display: block; margin: auto;\" />\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                mounted: false\n            }\n        },\n        mounted() {\n            // Set mounted to true when the component is mounted\n            this.mounted = true\n        }\n    }\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2000,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6622e96211beb4ea",
+        "type": "dt-asset",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "PID_ctrl",
+        "dtType": "Generic",
+        "aContext": "pid asset",
+        "aId": "",
+        "x": 680,
+        "y": 340,
+        "wires": [
+            [
+                "aa425c9bd4fce8cd",
+                "959a5338d4912e51"
+            ]
+        ]
+    },
+    {
+        "id": "aa425c9bd4fce8cd",
+        "type": "dt-action",
+        "z": "a1b1e8c8dbe9173f",
+        "params": {},
+        "name": "Turn_the_vann",
+        "topic": "",
+        "payload": "{'param1':msg.payload}",
+        "x": 900,
+        "y": 340,
+        "wires": [
+            [
+                "8bcc11aa07a406a8"
+            ]
+        ]
+    },
+    {
+        "id": "c4c2a82801ca579f",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Convert percentage in DC Voltage",
+        "info": "",
+        "x": 780,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8bcc11aa07a406a8",
+        "type": "dt-property",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Vann_Adjustment(in Volt)",
+        "accessGroup": "",
+        "aContext": "vann property",
+        "aId": "",
+        "aType": "",
+        "x": 1310,
+        "y": 380,
+        "wires": [
+            [
+                "6e41fa44d13cb01b"
+            ]
+        ]
+    },
+    {
+        "id": "6e41fa44d13cb01b",
+        "type": "dt-asset",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "3_way_vann",
+        "dtType": "Generic",
+        "aContext": "vann asset",
+        "aId": "",
+        "x": 1290,
+        "y": 500,
+        "wires": [
+            [
+                "19ec509a6e2656c5",
+                "d643a4389992ba9a"
+            ]
+        ]
+    },
+    {
+        "id": "959a5338d4912e51",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Serve_to_control",
+        "direction": "-->",
+        "x": 940,
+        "y": 460,
+        "wires": [
+            [
+                "6e41fa44d13cb01b"
+            ]
+        ]
+    },
+    {
+        "id": "59e437bdea6be76c",
+        "type": "dt-asset",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Aerotherme",
+        "dtType": "Generic",
+        "aContext": "aerotherme asset",
+        "aId": "",
+        "x": 1830,
+        "y": 460,
+        "wires": [
+            [
+                "c07fe333024e054c"
+            ]
+        ]
+    },
+    {
+        "id": "19ec509a6e2656c5",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Feed_hot_water_to",
+        "direction": "-->",
+        "x": 1550,
+        "y": 460,
+        "wires": [
+            [
+                "59e437bdea6be76c"
+            ]
+        ]
+    },
+    {
+        "id": "9664640dcf847ad0",
+        "type": "dt-asset",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Heat_Exchanger",
+        "dtType": "Generic",
+        "aContext": "he asset",
+        "aId": "",
+        "x": 1990,
+        "y": 600,
+        "wires": [
+            [
+                "2dc9e3faed0f3a75"
+            ]
+        ]
+    },
+    {
+        "id": "d643a4389992ba9a",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Relay_hot_water_to",
+        "direction": "-->",
+        "x": 1490,
+        "y": 600,
+        "wires": [
+            [
+                "9664640dcf847ad0"
+            ]
+        ]
+    },
+    {
+        "id": "c07fe333024e054c",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Redirect_hot_water_to",
+        "direction": "-->",
+        "x": 2060,
+        "y": 460,
+        "wires": [
+            [
+                "9664640dcf847ad0"
+            ]
+        ]
+    },
+    {
+        "id": "c0a5157eb3f4b134",
+        "type": "dt-asset",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Flowmeter",
+        "dtType": "Generic",
+        "aContext": "flowmeter asset",
+        "aId": "",
+        "x": 2610,
+        "y": 760,
+        "wires": [
+            [
+                "964a0e326e2006b5"
+            ]
+        ]
+    },
+    {
+        "id": "2dc9e3faed0f3a75",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Route_hot_water_to",
+        "direction": "-->",
+        "x": 2370,
+        "y": 600,
+        "wires": [
+            [
+                "c0a5157eb3f4b134"
+            ]
+        ]
+    },
+    {
+        "id": "5d70c98034f49eb8",
+        "type": "dt-asset",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Hot_Water_Tank",
+        "dtType": "Generic",
+        "aContext": "hot water tank asset",
+        "aId": "",
+        "x": 2630,
+        "y": 880,
+        "wires": [
+            [
+                "ac60a0ac265669e2"
+            ]
+        ]
+    },
+    {
+        "id": "964a0e326e2006b5",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "RouteandStore_Hot_Water_to",
+        "direction": "-->",
+        "x": 2900,
+        "y": 820,
+        "wires": [
+            [
+                "5d70c98034f49eb8"
+            ]
+        ]
+    },
+    {
+        "id": "ac60a0ac265669e2",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Reinject_hot_water_to",
+        "direction": "-->",
+        "x": 1600,
+        "y": 880,
+        "wires": [
+            [
+                "035425fc947919b7"
+            ]
+        ]
+    },
+    {
+        "id": "035425fc947919b7",
+        "type": "dt-asset",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Heat_Pump",
+        "dtType": "Generic",
+        "aContext": "hp asset",
+        "aId": "",
+        "x": 630,
+        "y": 720,
+        "wires": [
+            [
+                "ec6a897c78b8aafb"
+            ]
+        ]
+    },
+    {
+        "id": "849433c8d76a5b23",
+        "type": "dt-property",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Temp_Incoming_HP",
+        "accessGroup": "",
+        "aContext": "hp property n0.2",
+        "aId": "",
+        "aType": "",
+        "x": 260,
+        "y": 800,
+        "wires": [
+            [
+                "035425fc947919b7"
+            ]
+        ]
+    },
+    {
+        "id": "ec6a897c78b8aafb",
+        "type": "dt-relation",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Send_Hot_Water_to",
+        "direction": "-->",
+        "x": 1050,
+        "y": 660,
+        "wires": [
+            [
+                "6e41fa44d13cb01b"
+            ]
+        ]
+    },
+    {
+        "id": "156d6572b84366f3",
+        "type": "function",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "clean_cypher_payload",
+        "func": "let rawQueries = msg.payload.cypher;\n\n// Obtenir la date actuelle au format JJ/MM/AAAA HH:MM:SS\nfunction getFormattedDate() {\n    let now = new Date();\n    let pad = n => n.toString().padStart(2, '0');\n    return `${pad(now.getDate())}/${pad(now.getMonth() + 1)}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;\n}\n\nlet timestamp = getFormattedDate();\n\n// Traitement et nettoyage\nlet cleanedQueries = rawQueries.map(query => {\n    return query\n        .replace(/\"/g, '')                     \n        .replace(/\\\\n/g, '')                   \n        .replace(/\\s{2,}/g, ' ')               \n        .replace(/,\\s*(?=MERGE|MATCH)/g, '; ') \n        .trim() + ';'; // Point-virgule final\n});\n\n// Ajouter la date en tête + concaténer les requêtes + un seul saut de ligne final\nmsg.payload = `// ${timestamp}\\n` + cleanedQueries.join('\\n') + '\\n';\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "0",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 300,
+        "wires": [
+            [
+                "d037d8404ed294fe"
+            ]
+        ]
+    },
+    {
+        "id": "d037d8404ed294fe",
+        "type": "file",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Write to a file",
+        "filename": "/home/kambana/public/DTHPHW.cypher",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 1810,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87835e09faa3cbde",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "File Path fixed before on ~/.node-red/settings.js (modify httpStatic: 'File Path' )",
+        "info": "",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f2b9a31c28922423",
+        "type": "dt-graph",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "",
+        "projectName": "project1",
+        "projectId": "uuid1",
+        "version": "1.0.0+1",
+        "x": 1300,
+        "y": 300,
+        "wires": [
+            [
+                "156d6572b84366f3"
+            ]
+        ]
+    },
+    {
+        "id": "445863f4567e105d",
+        "type": "comment",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Generate cypher in output (visualized by Knwoledge graph)",
+        "info": "",
+        "x": 1450,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "08211117888c926e",
+        "type": "ui-gauge",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Temp Out Heat Exchanger",
+        "group": "8ca5738ff35c72b1",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Water Outcoming Heat Exchanger",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1800,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "fee94ee2f909a36e",
+        "type": "ui-gauge",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Temp Out Aerotherme",
+        "group": "a0e215310cdd5675",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Hot Water Coming out Aerotherme",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1680,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4fd09d93f026c9ca",
+        "type": "ui-gauge",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Flowrate of Hot Water",
+        "group": "ee115ad3bbbb60e4",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Flowmeter Hot Water",
+        "units": "L / min",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#99c1f1"
+            },
+            {
+                "from": "25",
+                "color": "#33d17a"
+            },
+            {
+                "from": "50",
+                "color": "#f6d32d"
+            },
+            {
+                "from": "75",
+                "color": "#ff7800"
+            },
+            {
+                "from": "100",
+                "color": "#ed333b"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2380,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1c835148659b48df",
+        "type": "ui-gauge",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Temp In chaud HP",
+        "group": "a25d42467177cc20",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Hot Water Incoming to HP",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 270,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c07c0965f157fe06",
+        "type": "ui-gauge",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Temp Out chaud HP",
+        "group": "a25d42467177cc20",
+        "order": 2,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Hot Water Outcoming from HP",
+        "units": "Degree Celcius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#00bfff"
+            },
+            {
+                "from": "50",
+                "color": "#00ffff"
+            },
+            {
+                "from": "100",
+                "color": "#00008b"
+            }
+        ],
+        "min": 0,
+        "max": "150",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 580,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4ffa56b8bdcc2e51",
+        "type": "dt-property",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Temp_out_HP",
+        "accessGroup": "",
+        "aContext": "hp_property_no1",
+        "aId": "",
+        "aType": "",
+        "x": 560,
+        "y": 620,
+        "wires": [
+            [
+                "035425fc947919b7"
+            ]
+        ]
+    },
+    {
+        "id": "237d9480362468d4",
+        "type": "dt-property",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "aerotherme_temp",
+        "accessGroup": "",
+        "aContext": "air_heater_property",
+        "aId": "",
+        "aType": "",
+        "x": 1730,
+        "y": 340,
+        "wires": [
+            [
+                "59e437bdea6be76c"
+            ]
+        ]
+    },
+    {
+        "id": "bc3443314cda0b2d",
+        "type": "dt-property",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Heat_exchanger_temp",
+        "accessGroup": "",
+        "aContext": "heat_exchanger_property",
+        "aId": "",
+        "aType": "",
+        "x": 1780,
+        "y": 660,
+        "wires": [
+            [
+                "9664640dcf847ad0"
+            ]
+        ]
+    },
+    {
+        "id": "3dec46c8e0969e3d",
+        "type": "dt-property",
+        "z": "a1b1e8c8dbe9173f",
+        "name": "Hot_water_flow",
+        "accessGroup": "",
+        "aContext": "Flowmeter_property",
+        "aId": "",
+        "aType": "",
+        "x": 2360,
+        "y": 760,
+        "wires": [
+            [
+                "c0a5157eb3f4b134"
+            ]
+        ]
+    },
+    {
+        "id": "f31a598d.9fd2c8",
+        "type": "function",
+        "z": "938e49a71b2e4c18",
+        "name": "Set base path",
+        "func": "//restriction d'acces sur /home/kamabana/public\nvar basePath = \"/home/kamabana/public/DTHPHW.cypher\";\n\nmsg.filename = basePath;\nreturn [msg, null];//envoie sortie 1\n\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "34dc99e5.495466"
+            ],
+            [
+                "98261154.3006"
+            ]
+        ]
+    },
+    {
+        "id": "98261154.3006",
+        "type": "http response",
+        "z": "938e49a71b2e4c18",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "34dc99e5.495466",
+        "type": "file in",
+        "z": "938e49a71b2e4c18",
+        "name": "Read to file",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "98261154.3006"
+            ]
+        ]
+    },
+    {
+        "id": "38d65d59.1d8aa2",
+        "type": "catch",
+        "z": "938e49a71b2e4c18",
+        "name": "All errors",
+        "scope": null,
+        "uncaught": false,
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "3b8014a.86ad8ec",
+                "5b18a8e7.fb8da8"
+            ]
+        ]
+    },
+    {
+        "id": "3b8014a.86ad8ec",
+        "type": "function",
+        "z": "938e49a71b2e4c18",
+        "name": "Set 404",
+        "func": "msg.payload = msg.error;\nmsg.statusCode = 404;//file not found\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "98261154.3006"
+            ]
+        ]
+    },
+    {
+        "id": "5b18a8e7.fb8da8",
+        "type": "debug",
+        "z": "938e49a71b2e4c18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 330,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5de7cbb4.fa21a4",
+        "type": "comment",
+        "z": "938e49a71b2e4c18",
+        "name": "Download File by HTTP by Steve-Mcl : https://flows.nodered.org/flow/db68bd4934cf46f39e6e453a348bc419",
+        "info": "",
+        "x": 460,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "67ecfa7f.3f0e24",
+        "type": "http in",
+        "z": "938e49a71b2e4c18",
+        "name": "",
+        "url": "/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "f31a598d.9fd2c8"
+            ]
+        ]
+    },
+    {
+        "id": "5d0b032f87229e91",
+        "type": "ui-template",
+        "z": "938e49a71b2e4c18",
+        "group": "a6c6f0b4c438f98b",
+        "page": "",
+        "ui": "",
+        "name": "DT's Sematic Model in a cypher file",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div class=\"text-start my-3\">\n    <a href=\"/DTHPHW.cypher\" class=\"btn btn-success\" role=\"button\">\n        Download_Cypher\n    </a>\n</div>\n\n<style>\n    .btn-success {\n        background-color: #198754;\n        border-color: #198754;\n        color: white;\n        font-weight: bold;\n        padding: 10px 20px;\n        font-size: 16px;\n        border-radius: 8px;\n        text-decoration: none;\n    }\n\n    .btn-success:hover {\n        background-color: #157347;\n        border-color: #157347;\n        color: white;\n        text-decoration: none;\n    }\n</style>\n",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 240,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a09caa9aacd88e7",
+        "type": "comment",
+        "z": "938e49a71b2e4c18",
+        "name": "File Path fixed before on ~/.node-red/settings.js ( modify httpStatic: 'File Path' )",
+        "info": "",
+        "x": 370,
+        "y": 180,
+        "wires": []
+    }
+]
