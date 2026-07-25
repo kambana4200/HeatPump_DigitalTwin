@@ -156,3 +156,45 @@ Password: datadrivendigitaltwin
 - This warning is expected because the SSL certificate included with the prototype was issued for the original deployment domain and not for your server's public IP address or hostname.
 
 - For the purpose of replicating the experiment, this warning can be safely bypassed to access the Human-Machine Interface (HMI). In a production deployment, the certificate should be replaced with one issued for the target domain or IP address.
+
+<!-- ## HOW TO CITE
+### How to Cite
+
+If you use, extend, or build upon this Digital Twin reference implementation in your research, please cite both the software release and the associated scientific publication.
+
+### Software
+
+Please cite the specific software release used in your research using the DOI provided for the corresponding version:
+
+Author(s). (Year). Digital Twin Reference Implementation for Cybersecurity Research in Industrial Environments (Version X.X). Zenodo. https://doi.org/XXXXXXX
+
+### Scientific Publication
+
+Please also cite the scientific publication describing the design, implementation, and research contributions associated with this Digital Twin reference implementation:
+
+Author(s). (Year). Title of the scientific publication. Journal Name, Volume(Issue), Pages. DOI: XXXXXXX
+
+BibTeX
+@software{yourname_digital_twin_2026,
+  author       = {Author, First Name},
+  title        = {Digital Twin Reference Implementation for Cybersecurity Research in Industrial Environments},
+  year         = {2026},
+  version      = {X.X},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.XXXXXXX},
+  url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
+}
+
+@article{yourname_digital_twin_article_2026,
+  author       = {Author, First Name},
+  title        = {Title of the Scientific Publication},
+  journal      = {Journal Name},
+  year         = {2026},
+  volume       = {XX},
+  number       = {XX},
+  pages        = {XX--XX},
+  doi          = {XXXXXXX}
+}
+### Citation Recommendation
+
+When this reference implementation is used as part of an academic study, experimental evaluation, or research contribution, citing both the software release and the associated scientific publication is recommended. Citing the specific software version ensures that the exact implementation used in the research can be identified and reproduced. -->
