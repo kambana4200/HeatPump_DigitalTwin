@@ -1,0 +1,59 @@
+# ============================================================
+# DT-HP-HW Prototype - Software Environment
+# Version manifest for reproducibility
+# ============================================================
+
+[OPERATING_SYSTEM]
+Ubuntu=Ubuntu 24.04.4 LTS
+Architecture=x86_64
+
+[CONTAINERISATION]
+Docker=29.2.1
+Docker_Compose=5.1.0
+
+[ORCHESTRATION]
+MicroK8s=1.33.13 
+
+[NODE_RUNTIME]
+Node.js=22.14.0
+
+[NODE_RED]
+Node-RED=4.0.9
+
+
+[NODE_RED_PALETTES]
+node-red-contrib-iiot-opcua=4.1.2
+node-red-contrib-easy-pid-controller=1.2.1
+node-red-node-mysql=3.0.0
+node-red-contrib-influxdb=0.7.0
+node-red-contrib-string=1.0.0
+node-red-node-base64=1.0.0
+node-red-contrib-boolean-logic-ultimate=1.2.8
+node-red-dashboard=3.6.6
+@flowfuse/node-red-dashboard=1.30.2
+
+[PYTHON]
+Python=3.12.3
+
+[PYTHON_LIBRARIES]
+opcua=0.98.13
+
+[DATABASE]
+MariaDB=10.11
+
+[GRAPH_DATABASE]
+Neo4j Desktop=1.6.1
+Neo4j_Browser=5.26.1
+
+
+[INDUSTRIAL_SIDE]
+LabVIEW=2022 Q3
+NI_DAQmx= NI-DAQmx 2022 Q3
+
+[REPRODUCIBILITY]
+DT_Artifact_Repository=https://github.com/kambana4200/HeatPump_DigitalTwin/tree/main/Replicability_of_DT_Prototype
+DT_Artifact_Path=Replicability_of_DT_Prototype
+
+[MODIFIED_COMPONENTS]
+node-red-contrib-digital-twin= Commit 8fb747b2921cdf872a80c805e1fcf565a37815aa 
+Repository=https://github.com/kambana4200/node-red-contrib-digital-twin
