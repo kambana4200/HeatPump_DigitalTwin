@@ -162,12 +162,6 @@ Password: datadrivendigitaltwin
 
 If you use, extend, or build upon this Digital Twin reference implementation in your research, please cite both the software release and the associated scientific publication.
 
-### Software
-
-Please cite the specific software release used in your research using the DOI provided for the corresponding version:
-
-Author(s). (Year). Digital Twin Reference Implementation for Cybersecurity Research in Industrial Environments (Version X.X). Zenodo. https://doi.org/XXXXXXX
-
 ### Scientific Publication
 
 Please also cite the scientific publication describing the design, implementation, and research contributions associated with this Digital Twin reference implementation:
