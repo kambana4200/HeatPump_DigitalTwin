@@ -178,4 +178,4 @@ Author(s). (Year). Title of the scientific publication. Journal Name, Volume(Iss
 }
 ### Citation Recommendation
 
-When this reference implementation is used as part of an academic study, experimental evaluation, or research contribution, citing both the software release and the associated scientific publication is recommended. Citing the specific software version ensures that the exact implementation used in the research can be identified and reproduced. 
+When this reference implementation is used as part of an academic study, experimental evaluation, or research contribution, citing the associated scientific publication is recommended. 
